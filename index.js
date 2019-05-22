@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/test', (req, res) => {
-  const data = ['one', 'two', 'three'];
+  const data = ['one', 'two', 'three', 'five'];
   res.json(data)
   console.log('data sended')
 });
