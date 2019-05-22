@@ -1,0 +1,26 @@
+{
+  "name": "reactplusrestapi",
+  "version": "1.0.0",
+  "description": "Rest api with connect react",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiasz18/RestApi_with_React.git"
+  },
+  "author": "Tobiasz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobiasz18/RestApi_with_React/issues"
+  },
+  "homepage": "https://github.com/tobiasz18/RestApi_with_React#readme"
+}
