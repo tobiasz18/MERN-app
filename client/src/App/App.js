@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
 class App extends Component {
 
   constructor(props) {
@@ -15,9 +16,9 @@ class App extends Component {
   }
 
   getUrl = () => {
-    const url = '/test' || 'http://localhost:5000/test'
-
-    console.log('a to url', url)
+    const url = process.env.NODE_ENV == 'production' ? '/test' : `http://localhost:${process.env.PORT || 5000}/test`
+    console.log('proces senv ', process.env.NODE_ENV)
+    console.log(url)
     fetch(url)
     .then(res => res.json())
     .then(list => this.setState({list}))
