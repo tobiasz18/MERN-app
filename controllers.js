@@ -1,0 +1,60 @@
+const Event = require('./schema/model');
+const uuid = require('uuid/v4');
+
+exports.getAll = async (req, res, next) => {
+  try {
+    const events = await Event.find({})
+
+    res.json(events);
+
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}
+
+exports.create = async (req, res, next) => {
+  try {
+    const event = new Event(req.body)
+    event.id = uuid().split('-')[0];
+
+    await event.save()
+    
+    res.json(event)
+
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}
+
+exports.getSpecificeEvent = async (req, res, next) => {
+  try {
+    const singleEvent = await Event.findOne({id: req.params.id}).exec()
+
+    res.json(singleEvent)
+
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}
+
+exports.updateEvent = async (req, res, next) => {
+  try {
+    await Event.updateOne({id: req.params.id}, req.body).exec()
+
+    Event.findOne({id: req.params.id}).exec()
+    .then(resp => res.json(resp))
+
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
+
+exports.deleteEvent = async (req, res, next) => {
+  try {
+    const deleted = await Event.deleteOne({id: req.params.id}).exec()
+    res.json(deleted)
+
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
