@@ -12,11 +12,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log('helow')
     this.getUrl()
   }
 
   getUrl = () => {
-    const url = process.env.NODE_ENV == 'production' ? '/test' : `http://localhost:${process.env.PORT || 5000}/test`
+    const url = process.env.NODE_ENV == 'production' ? '/api' : `http://localhost:${process.env.PORT || 5000}/api`
     console.log('proces senv ', process.env.NODE_ENV)
     console.log(url)
     fetch(url)
@@ -32,7 +33,7 @@ class App extends Component {
       <div>
         asdasdsdasdsd
         {list.length ? (
-          list.map(list => <div>{list}</div>)
+          list.map(list => <div>{list.title}</div>)
         ) :
         <div>loading...</div>
         }
