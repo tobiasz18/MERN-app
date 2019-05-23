@@ -9,13 +9,13 @@ const Navigation = () => (
       <Logo>Events Api</Logo>
       <Ul>
         <li>
-          <Link>Events</Link>
+        <Link to="/">Events</Link>
         </li>
         <li>
           <Link>Search <img src={search} width="15px"/></Link> 
         </li>
         <li>
-          <Link>Add event</Link>
+          <Link to="/add_event">Add event</Link>
         </li>
       </Ul>
     </NavContainer> 

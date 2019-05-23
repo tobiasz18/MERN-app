@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+  background: #fdfdfd;
+
 `
 export const NavContainer = styled.div`
+  max-width: 970px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 75vw;
   margin: auto;
 
   @media (max-width: 600px) {
@@ -15,7 +18,6 @@ export const NavContainer = styled.div`
     flex-direction: column;
   }
 `
-
 export const Logo = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
   font-size: 25px;
