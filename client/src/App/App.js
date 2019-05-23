@@ -2,10 +2,13 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store'
 import Navigation from './components/presentation/naivigation';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <Provider store={store}>
-    <Navigation />
+    <Router>
+      <Navigation />
+    </Router>
   </Provider>
 )
 
