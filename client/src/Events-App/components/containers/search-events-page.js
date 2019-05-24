@@ -14,14 +14,11 @@ class SearchEvent extends Component {
   }
 
   handleSubmit = () => {
-    console.log(this.handleChange(), 'submite')
     this.props.getEventByLocation(this.handleChange())
     this.textInput.current.value = ''
   }
 
   render() {
-    console.log(this.props , 'z searthc')
-    console.log(this.props.searchEvents, 'lel')
     return (
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',marginTop: '100px'}}>
         <input type="text" ref={this.textInput} onChange={this.handleChange}/>
@@ -41,8 +38,3 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {getEventByLocation})(SearchEvent) 
 
-
-/*
- handleChange,
-        handleSubmit,
-*/

@@ -7,13 +7,11 @@ import { getEventByTitle } from '../../actions';
 class EventDetails extends Component {
 
   componentDidMount = () => {
-   console.log(this.props.match.params.title.replace(/_/g, ' '), "Carnival of Venice: masked fete (Italy) ")
    const title = this.props.match.params.title.replace(/_/g, ' ')
    this.props.getEventByTitle(title)
   }
 
   render() {
-    console.log(this.props, 'events details')
     const {title, desc, imageUrl} = this.props.singleEvent
     return (
       <div>

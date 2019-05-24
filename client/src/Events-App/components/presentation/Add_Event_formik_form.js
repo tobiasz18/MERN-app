@@ -25,7 +25,6 @@ const FormAddEvents = ({ getLink, addEvent }) => (
       }}
       onSubmit={async (values) => {
         const { file, ...rest } = values
-        console.log(values, 'values z add Event')
         const linkToImage = await getLink(file)
         addEvent({...rest, imageUrl: linkToImage})     
       }}
