@@ -26,9 +26,21 @@ exports.create = async (req, res, next) => {
   }
 }
 
-exports.getSpecificeEvent = async (req, res, next) => {
+exports.searchByTitle = async (req, res, next) => {
   try {
-    const singleEvent = await Event.findOne({id: req.params.id}).exec()
+    const singleEvent = await Event.findOne({title: req.params.title}).exec()
+
+    res.json(singleEvent)
+
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}
+
+exports.searchByLocation = async (req, res, next) => {
+  try {
+    const singleEvent = await Event.find({location: 
+      { $regex: new RegExp("^" + req.params.location.toLowerCase(), "i") } }).exec()
 
     res.json(singleEvent)
 

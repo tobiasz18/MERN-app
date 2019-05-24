@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EventsContainer from './components/containers/events-container-Page';
 import addEventContainer from './components/containers/addEvent-container-Page';
 import EventDetails from './components/containers/Details-events-Page';
+import SearchEvent from './components/containers/search-events-page';
 
 const App = () => (
   <Provider store={store}>
@@ -15,6 +16,7 @@ const App = () => (
         <Route exact path="/" component={EventsContainer} />
         <Route exact path="/add_event" component={addEventContainer} />
         <Route exact path="/events/:title" component={EventDetails}  />
+        <Route exact path="/search" component={SearchEvent}  />
       </Switch>
     </Router>
   </Provider>

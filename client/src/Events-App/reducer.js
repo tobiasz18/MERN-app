@@ -1,9 +1,10 @@
 
-import { GET_EVENTS, LOAD_EVENTS, ADD_EVENT, GET_EVENT } from './constants'
+import { GET_EVENTS, LOAD_EVENTS, ADD_EVENT, GET_EVENT, SEARCH_EVENTS } from './constants'
 
 const initialState = {
   events: [],
   singleEvent: {},
+  searchEvents: [],
   loading: false
 }
 
@@ -23,6 +24,11 @@ const events = (state = initialState, action) => {
       return {
        ...state, loading: false, singleEvent: action.singleEvent
       }  
+    case SEARCH_EVENTS:
+        console.log('actions ', action)
+        return {
+          ...state, loading: false, searchEvents: action.searchEvents
+        } 
     case LOAD_EVENTS: 
       return {
         ...state,

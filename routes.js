@@ -9,7 +9,8 @@ router.get('/', controllers.getAll);
 router.post('/', controllers.create);
 
 // get Specifice Event
-router.get('/:id', controllers.getSpecificeEvent);
+router.get('/search/title/:title', controllers.searchByTitle); //search first match
+router.get('/search/location/:location', controllers.searchByLocation); //search all matches
 
 // edit/update specifice event
 router.put('/:id', controllers.updateEvent);

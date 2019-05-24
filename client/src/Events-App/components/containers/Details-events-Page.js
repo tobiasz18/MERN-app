@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Section } from '../../styled-components/eventsContainer-theme';
 import { connect } from 'react-redux';
-import { getSingleEvent } from '../../actions';
+import { getEventByTitle } from '../../actions';
 
 
 class EventDetails extends Component {
@@ -9,7 +9,7 @@ class EventDetails extends Component {
   componentDidMount = () => {
    console.log(this.props.match.params.title.replace(/_/g, ' '), "Carnival of Venice: masked fete (Italy) ")
    const title = this.props.match.params.title.replace(/_/g, ' ')
-   this.props.getSingleEvent(title)
+   this.props.getEventByTitle(title)
   }
 
   render() {
@@ -30,4 +30,4 @@ const mapStateToProps = state => ({
   loading:  state.loading
 })
 
-export default connect(mapStateToProps, {getSingleEvent})(EventDetails)
+export default connect(mapStateToProps, {getEventByTitle})(EventDetails)

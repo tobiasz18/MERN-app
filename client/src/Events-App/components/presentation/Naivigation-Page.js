@@ -12,7 +12,7 @@ const Navigation = () => (
         <Link to="/">Events</Link>
         </li>
         <li>
-          <Link>Search <img src={search} width="15px"/></Link> 
+          <Link to="/search">Search <img src={search} width="15px"/></Link> 
         </li>
         <li>
           <Link to="/add_event">Add event</Link>
