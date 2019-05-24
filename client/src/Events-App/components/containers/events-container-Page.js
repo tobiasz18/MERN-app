@@ -4,8 +4,6 @@ import { getEvents } from '../../actions';
 import { Article } from '../../styled-components/eventsContainer-theme';
 import SingleEvent from '../presentation/SingleEventOnList';
 
-
-
 class EventsContainer extends Component {
 
   componentDidMount() {

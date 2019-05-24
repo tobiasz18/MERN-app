@@ -5,6 +5,7 @@ import Navigation from './components/presentation/Naivigation-Page';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EventsContainer from './components/containers/events-container-Page';
 import addEventContainer from './components/containers/addEvent-container-Page';
+import EventDetails from './components/containers/Details-events-Page';
 
 const App = () => (
   <Provider store={store}>
@@ -13,6 +14,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={EventsContainer} />
         <Route exact path="/add_event" component={addEventContainer} />
+        <Route exact path="/events/:title" component={EventDetails}  />
       </Switch>
     </Router>
   </Provider>

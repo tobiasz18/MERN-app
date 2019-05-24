@@ -25,7 +25,7 @@ const FormAddEvents = ({ getLink, addEvent }) => (
       }}
       onSubmit={async (values) => {
         const { file, ...rest } = values
-        console.log(values)
+        console.log(values, 'values z add Event')
         const linkToImage = await getLink(file)
         addEvent({...rest, imageUrl: linkToImage})     
       }}
@@ -39,7 +39,7 @@ const FormAddEvents = ({ getLink, addEvent }) => (
         setFieldValue
       }) => (
         <FormContainer>
-            <HeaderForm>Add new event to main page</HeaderForm>
+            <HeaderForm>Add new event </HeaderForm>
             <form onSubmit={handleSubmit}>
                 <Label>
                     <SpanContent>Title<SpanRequired >*</SpanRequired></SpanContent>
@@ -92,6 +92,10 @@ const FormAddEvents = ({ getLink, addEvent }) => (
                             <ErrorMessage>{errors.desc}</ErrorMessage>
                         </div>  
                       ) : <Textarea name="desc" value={values.desc} onChange={handleChange} />}                                     
+                </Label>
+                <Label>
+                    <SpanContent>Date<SpanRequired>*</SpanRequired>  </SpanContent>
+                    <input type="date" name="date" onChange={handleChange} value={values.date}></input>
                 </Label>
                 <Label>
                     <SpanContent>Image<SpanRequired>*</SpanRequired>                      

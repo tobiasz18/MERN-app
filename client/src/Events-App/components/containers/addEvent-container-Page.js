@@ -31,8 +31,7 @@ class AddEventContainer extends Component {
     return (
       loading ? 
       <LoaderContainer>
-       <img src={loader}/>
-
+        <img src={loader}/>
       </LoaderContainer> :
       <div>
         <FormAddEvents getLink={this.getLink} addEvent={addEvent}/> 
