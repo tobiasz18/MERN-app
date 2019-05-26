@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import { getEvents } from '../../actions';
-import { Article } from '../../styled-components/eventsContainer-theme';
-import SingleEvent from '../presentation/SingleEventOnList';
+import { Article } from '../../styled-components/global-theme';
+import EventsList from '../presentation/EventsList';
 
 class EventsContainer extends Component {
 
@@ -17,8 +17,8 @@ class EventsContainer extends Component {
         {
           loading ? 
             <h5>Loading...</h5> :
-            events.map(item => <SingleEvent key={item.id} 
-              title={item.title} desc={item.desc} image={item.imageUrl}/>).reverse()
+            events.map(item => <EventsList key={item.id} 
+              title={item.title} desc={item.desc} location={item.location} image={item.imageUrl}/>).reverse()
         }
       </Article>
     )

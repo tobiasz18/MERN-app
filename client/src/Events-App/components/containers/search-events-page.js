@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getEventByLocation } from '../../actions';
+import EventsList from '../presentation/EventsList';
+import { Article } from '../../styled-components/global-theme';
 
 class SearchEvent extends Component {
   constructor(props) {
@@ -20,14 +22,15 @@ class SearchEvent extends Component {
 
   render() {
     return (
-      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',marginTop: '100px'}}>
-        <input type="text" ref={this.textInput} onChange={this.handleChange}/>
-        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+      <Article>
+        <input type="text" placeholder="search by location" ref={this.textInput} onChange={this.handleChange}/>
+        <button type="submit"onClick={this.handleSubmit}>Submit</button>
 
         {
-          this.props.searchEvents.map(item => <div>{item.title}</div>)
+          this.props.searchEvents.map(item => <EventsList key={item.id} 
+            title={item.title} desc={item.desc} location={item.location} image={item.imageUrl}/>)
         }
-      </div>
+      </Article>
     )
   }
 }

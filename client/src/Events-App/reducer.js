@@ -25,7 +25,6 @@ const events = (state = initialState, action) => {
        ...state, loading: false, singleEvent: action.singleEvent
       }  
     case SEARCH_EVENTS:
-        console.log('actions ', action)
         return {
           ...state, loading: false, searchEvents: action.searchEvents
         } 

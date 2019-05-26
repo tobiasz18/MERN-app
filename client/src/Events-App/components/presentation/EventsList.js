@@ -1,9 +1,9 @@
 import React from 'react';
 import { Section } from '../../styled-components/eventsContainer-theme';
-import { SectionOne, Img, Button} from '../../styled-components/singleEventOnList-theme';
+import { SectionOne, Img, Button} from '../../styled-components/EventsList-theme';
 import { Link } from 'react-router-dom';
 
-const SingleEvent = ({ title, desc, image, id }) => (
+const EventsList = ({ title, desc, image, location }) => (
     <Section>
       <div>
         <h1>{title}</h1>
@@ -17,7 +17,8 @@ const SingleEvent = ({ title, desc, image, id }) => (
             <Img src={image}/>
           </div>
         </SectionOne>
+        <div>location: { location}</div>
   </Section>
 )
 
-export default SingleEvent;
+export default EventsList;
