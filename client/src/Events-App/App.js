@@ -5,8 +5,8 @@ import Navigation from './components/presentation/Naivigation-Page';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EventsContainer from './components/containers/events-container-Page';
 import addEventContainer from './components/containers/addEvent-container-Page';
-import EventDetails from './components/containers/Details-events-Page';
-import SearchEvent from './components/containers/search-events-page';
+import EventDetailsContainer from './components/containers/Details-events-container-Page';
+import SearchContainer from './components/containers/Search-container-page';
 
 const App = () => (
   <Provider store={store}>
@@ -14,9 +14,9 @@ const App = () => (
       <Navigation />
       <Switch>
         <Route exact path="/" component={EventsContainer} />
-        <Route exact path="/add_event" component={addEventContainer} />
-        <Route exact path="/events/:title" component={EventDetails}  />
-        <Route exact path="/search" component={SearchEvent}  />
+        <Route  path="/add_event" component={addEventContainer} />
+        <Route  path="/events/:title" component={EventDetailsContainer}  />
+        <Route  path='/search' component={SearchContainer} />
       </Switch>
     </Router>
   </Provider>

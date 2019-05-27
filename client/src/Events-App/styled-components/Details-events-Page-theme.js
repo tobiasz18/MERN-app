@@ -4,7 +4,11 @@ export const Img = styled.img`
   max-width: 600px;
 `
 export const Section = styled.section`
+  margin: auto;
   margin-top: 75px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
 
   p {
     color: rgb(112, 112, 112);

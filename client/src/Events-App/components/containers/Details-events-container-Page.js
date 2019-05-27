@@ -4,7 +4,7 @@ import { getEventByTitle } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
 
-class EventDetails extends Component {
+class EventDetailsContainer extends Component {
 
   constructor(props) {
     super(props);
@@ -19,7 +19,7 @@ class EventDetails extends Component {
   }
 
   componentDidUpdate = (prevProps) => {
-    // To prevent loadig the same data during substitution
+    // To prevent loadig the same data during substitution 
    if (this.props.singleEvent !== prevProps.singleEvent) {
       this.setState({data: this.props.singleEvent})
     }
@@ -33,11 +33,11 @@ class EventDetails extends Component {
             <SpanHeader>{this.state.data.title}</SpanHeader>
             <p>{this.state.data.desc}</p>
             <Img src={this.state.data.imageUrl} />
-            <p>location: {this.state.data.location}</p>
-            <p>date: {this.state.data.date}</p>
-            <p>organization: {this.state.data.organization}</p>
+            <p>Location: {this.state.data.location}</p>
+            <p>Date event: {this.state.data.date}</p>
+            <p>Organizers by {this.state.data.organization}</p>
           </Section> :
-          <h1>LOADING...</h1> 
+          <h1>Loading...</h1> 
          }  
       </Article>
     )
@@ -49,4 +49,4 @@ const mapStateToProps = state => ({
   loading:  state.loading
 })
 
-export default connect(mapStateToProps, {getEventByTitle})(EventDetails)
+export default connect(mapStateToProps, {getEventByTitle})(EventDetailsContainer)

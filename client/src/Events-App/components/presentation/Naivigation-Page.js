@@ -6,7 +6,7 @@ import search from '../../img/search.png'
 const Navigation = () => (
   <Nav>
     <NavContainer>
-      <Logo>Events Api</Logo>
+      <Link style={{color: 'black'}} to="/"><Logo>Events Api</Logo></Link>
       <Ul>
         <li>
         <Link to="/">Events</Link>
