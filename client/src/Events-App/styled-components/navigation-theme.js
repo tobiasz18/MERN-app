@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #e6e6e6;
   background: #fdfdfd;
+  padding: 7px 0;
 
 `
 export const NavContainer = styled.div`
@@ -27,10 +28,11 @@ export const Ul = styled.ul`
   display: flex;
   list-style-type: none;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 18px;
   
   li {
-    padding-right: 25px;
+    padding-right: 30px;
     
     a {
       text-decoration: none;
