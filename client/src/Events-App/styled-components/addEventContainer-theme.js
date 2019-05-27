@@ -4,7 +4,7 @@ export const FormContainer = styled.div`
   padding: 20px 12px 10px 20px;
   font: 13px Arial, Helvetica, sans-serif;
   margin: auto;
-  margin-top: 75px;
+  margin-top: 20px;
   max-width: 500px;
   min-width: 50vw;
 `

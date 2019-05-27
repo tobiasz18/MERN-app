@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const ContainerArticle = styled.article`
   @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
   font-family: 'Source Sans Pro', sans-serif;
-  max-width: 970px;
-  padding: 0 20px;
+
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -15,24 +14,21 @@ export const ContainerArticle = styled.article`
   }
 `
 
-
 export const ContainerSection1 = styled.section`
+  padding: 50px 47px;
+  width: 100%;
+  text-align: center;
+  background-color: #4c4a4a
 
-padding: 50px 47px;
-width: 100%;
-text-align: center;
-background-color: #4c4a4a
+  input {
+    background: #fff;
+    border: 1px solid #e2dddd;
+    padding: 10px 32px;
+    font-size: 17px;
+    outline-color: #ff8628;
+  }
 
-
-input {
-  background: #fff;
-  border: 1px solid #e2dddd;
-  padding: 10px 32px;
-  font-size: 17px;
-  outline-color: #ff8628;
-}
-
-  a{
+  a {
     background: #fea66b;
     border: 0;
     cursor: pointer;
@@ -46,7 +42,8 @@ input {
 `
 
 export const ContainerSection2 = styled.section`
-  width: 100%;
+  max-width: 970px;
+  padding: 0 20px;
   margin-top: 75px;
 `
 

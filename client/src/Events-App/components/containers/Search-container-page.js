@@ -1,9 +1,6 @@
 import React from 'react';
-
-
 import { Route, Link } from 'react-router-dom';
 import EventSearchList from './Search-event-list-container';
-import { Button } from '../../styled-components/EventsList-theme';
 import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-page-theme';
 
 class SearchContainer extends React.Component {
@@ -23,8 +20,7 @@ class SearchContainer extends React.Component {
   render() {
     return (
       <ContainerArticle>
-        <ContainerSection1>
-      
+        <ContainerSection1>   
           <input 
             type="text" 
             ref={this.myRef} 
