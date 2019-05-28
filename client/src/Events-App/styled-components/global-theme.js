@@ -6,7 +6,10 @@ export const Article = styled.article`
   padding: 0 20px;
   margin: auto;
 
-  border-right: 1px solid;
-  border-left: 1px solid;
-  border-color: #f5f1f1;
+
+
+
+  display: flex;
+  flex-wrap: wrap;
+
 `

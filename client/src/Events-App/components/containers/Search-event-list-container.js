@@ -1,8 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getEventByLocation } from '../../actions';
+import SearchSingleEvent from '../presentation/SearchSingleEvent';
 
 class EventSearchList extends React.Component {
+
+  static defaultProps = {
+    searchEvents: []
+  }
 
   componentDidMount = () => {
     this.props.getEventByLocation(this.props.match.params.location)
@@ -15,18 +20,21 @@ class EventSearchList extends React.Component {
   }
 
   render() {
+
     return (
-      <div>
+      <React.Fragment>
         {
-          this.props.searchEvents.map(item => <div>{item.title}</div>)
+          this.props.searchEvents.map(item => <SearchSingleEvent
+            key={item.id} image={item.imageUrl} title={item.title} />)
         }
-      </div>
+      </React.Fragment>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  searchEvents: state.searchEvents
+  searchEvents: state.searchEvents,
+  asd: state.events
 })
 
 export default connect(mapStateToProps, {getEventByLocation})(EventSearchList);

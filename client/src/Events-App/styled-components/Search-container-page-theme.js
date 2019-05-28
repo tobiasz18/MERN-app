@@ -42,8 +42,11 @@ export const ContainerSection1 = styled.section`
 `
 
 export const ContainerSection2 = styled.section`
+  display: flex;
+  flex-wrap: wrap;
   max-width: 970px;
-  padding: 0 20px;
+  margin-bottom: 75px;
   margin-top: 75px;
+
 `
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import EventSearchList from './Search-event-list-container';
-import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-page-theme';
-
+import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-container-page-theme';
+import { connect } from 'react-redux';
+import { getEvents } from '../../actions';
 class SearchContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,8 @@ class SearchContainer extends React.Component {
     }
     this.myRef = React.createRef();
   }
+
+  componentDidMount = () => this.props.getEvents()
 
   handleChange = () => {
     const value = this.myRef.current.value;
@@ -40,4 +43,4 @@ class SearchContainer extends React.Component {
 
 
 
-export default SearchContainer;
+export default connect(null, {getEvents})(SearchContainer);
