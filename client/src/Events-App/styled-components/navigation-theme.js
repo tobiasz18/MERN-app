@@ -7,7 +7,7 @@ export const Nav = styled.nav`
 
 `
 export const NavContainer = styled.div`
-  max-width: 970px;
+  max-width: 1100px;
   padding: 0 20px;
   display: flex;
   align-items: center;

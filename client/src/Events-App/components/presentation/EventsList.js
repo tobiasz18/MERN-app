@@ -1,23 +1,22 @@
 import React from 'react';
-import { Section } from '../../styled-components/eventsContainer-theme';
-import { SectionOne, Img, Button} from '../../styled-components/EventsList-theme';
+
+import { Section, Image, Text} from '../../styled-components/EventsList-theme';
 import { Link } from 'react-router-dom';
 
 const EventsList = ({ title, desc, image, location, checkLengthDesc }) => (
-    <Section>
-      <div>
-        <h1>{title}</h1>
+  <Section>
+    <Image>
+      <img src={image}/>
+    </Image>
+    <Text>
+     <div>
+        <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`}>{title}</Link>
+        <p>{checkLengthDesc(desc)}</p>
       </div>
-      <SectionOne> 
-        <div>
-          <p>{checkLengthDesc(desc)}</p>
-          <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`}>Details</Link>
-          </div>
-          <div>
-            <Img src={image}/>
-          </div>
-        </SectionOne>
-        <div>location: { location}</div>
+      <div>
+        <div>location: {location}</div>
+      </div>
+    </Text>
   </Section>
 )
 

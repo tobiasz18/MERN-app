@@ -19,6 +19,7 @@ export const ContainerSection1 = styled.section`
   width: 100%;
   text-align: center;
   background-color: #4c4a4a
+  box-sizing: border-box;
 
   input {
     background: #fff;

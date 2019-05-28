@@ -13,7 +13,7 @@ class EventsContainer extends Component {
 
   checkLengthDesc = (paragraph) => {
     if(paragraph.length > 50) {
-      return `${paragraph.slice(0,140)}...`
+      return `${paragraph.slice(0,160)}...`
     }
     return paragraph
   }
@@ -25,7 +25,7 @@ class EventsContainer extends Component {
         {
           loading ? 
             <h5>Loading...</h5> :
-          events.map(item => <EventsList key={item.id} 
+            events.map(item => <EventsList key={item.id} 
               title={item.title} desc={item.desc} checkLengthDesc={this.checkLengthDesc} location={item.location} image={item.imageUrl}/>).reverse()
               
         }
