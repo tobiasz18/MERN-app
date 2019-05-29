@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Logo, Nav, Ul, NavContainer}  from '../../styled-components/navigation-theme';
+import { Logo, Nav, Ul, NavContainer }  from '../../styled-components/navigation-theme';
 import search from '../../img/search.png'
 
 const Navigation = () => (
   <Nav>
     <NavContainer>
-      <Link style={{color: 'black'}} to="/"><Logo>Events Api</Logo></Link>
+      <Link style={{color: 'black'}} to="/"><Logo>Events Home</Logo></Link>
       <Ul>
         <li>
         <Link to="/">Events</Link>

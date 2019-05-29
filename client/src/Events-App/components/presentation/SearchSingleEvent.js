@@ -1,16 +1,16 @@
 import React from 'react';
-import { SingleContainer } from '../../styled-components/SearchSingleEvent-theme';
+import { Figure } from '../../styled-components/SearchSingleEvent-theme';
 import { Link } from 'react-router-dom';
 
 const SearchSingleEvent = ({image, title}) => (
-  <SingleContainer>
+  <Figure>
     <Link to={`/events/${title}`}>
       <img src={image} />
       <div>
         <span>{title}</span>
       </div>
     </Link>
-  </SingleContainer>
+  </Figure>
 )
 
 export default SearchSingleEvent;

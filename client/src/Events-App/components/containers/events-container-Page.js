@@ -20,6 +20,7 @@ class EventsContainer extends Component {
 
   render() {
     const { loading, events } = this.props;
+    
     return (
       <Article>   
         {
@@ -28,14 +29,14 @@ class EventsContainer extends Component {
             events.map(item => <EventsList key={item.id} 
               title={item.title} desc={item.desc} checkLengthDesc={this.checkLengthDesc} location={item.location} image={item.imageUrl}/>).reverse()
               
-        }
+            }
       </Article>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  events: state.events,
+  events: Object.values(state.events),
   loading: state.loading
 }) 
 

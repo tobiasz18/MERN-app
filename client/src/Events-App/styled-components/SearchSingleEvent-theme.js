@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SingleContainer =  styled.article`
+export const Figure =  styled.figure`
   flex: 0 1 48%;
   position: relative;
   margin: 1%;

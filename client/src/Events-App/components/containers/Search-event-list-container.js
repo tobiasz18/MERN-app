@@ -33,8 +33,7 @@ class EventSearchList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  searchEvents: state.searchEvents,
-  asd: state.events
+  searchEvents: Object.values(state.searchEvents)
 })
 
 export default connect(mapStateToProps, {getEventByLocation})(EventSearchList);

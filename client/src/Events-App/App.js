@@ -7,6 +7,7 @@ import EventsContainer from './components/containers/events-container-Page';
 import addEventContainer from './components/containers/addEvent-container-Page';
 import EventDetailsContainer from './components/containers/Details-events-container-Page';
 import SearchContainer from './components/containers/Search-container-page';
+import EditEventContainer from './components/containers/Edit-event-container';
 
 const App = () => (
   <Provider store={store}>
@@ -17,6 +18,7 @@ const App = () => (
         <Route  path="/add_event" component={addEventContainer} />
         <Route  path="/events/:title" component={EventDetailsContainer}  />
         <Route  path='/search' component={SearchContainer} />
+        <Route path="/edit/:id" component={EditEventContainer} />
       </Switch>
     </Router>
   </Provider>

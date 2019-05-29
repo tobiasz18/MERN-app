@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getEventByTitle } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
-
+import { Link } from 'react-router-dom';
 class EventDetailsContainer extends Component {
 
   constructor(props) {
@@ -21,11 +21,12 @@ class EventDetailsContainer extends Component {
   componentDidUpdate = (prevProps) => {
     // To prevent loadig the same data during substitution 
    if (this.props.singleEvent !== prevProps.singleEvent) {
-      this.setState({data: this.props.singleEvent})
+      this.setState({data: this.props.singleEvent[0]})
     }
   }
 
   render() {
+  console.log(this.state)
     return (
       <Article>
         {this.state.data ? 
@@ -36,6 +37,7 @@ class EventDetailsContainer extends Component {
             <p>Location: {this.state.data.location}</p>
             <p>Date event: {this.state.data.date}</p>
             <p>Organizers by {this.state.data.organization}</p>
+            <Link to={`/edit/${this.state.data.id}`}>Edit</Link>
           </Section> :
           <h1>Loading...</h1> 
          }  
@@ -45,7 +47,7 @@ class EventDetailsContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  singleEvent: state.singleEvent,
+  singleEvent: Object.values(state.singleEvent),
   loading:  state.loading
 })
 
