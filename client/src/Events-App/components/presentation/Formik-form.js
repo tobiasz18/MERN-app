@@ -1,5 +1,5 @@
 import React from 'react';
-import {getLink} from '../../helpers/ImagurRequest';
+
 import {
   FormContainer,
   HeaderForm,
@@ -13,6 +13,22 @@ import {
   SubmitButton } from '../../styled-components/addEventContainer-theme';
 import { AddEventSchema } from '../../helpers/validateSchema';
 import { Formik } from 'formik';
+
+const getLink = async (file) => { 
+  const url = 'https://api.imgur.com/3/image';
+  const data = new FormData();
+  data.append('image', file);
+
+  const getLinkRequest = await fetch(url, {
+    body: data,
+    headers: {
+      "Authorization": "Client-ID " + '4409588f10776f7'
+    },
+    method: 'POST'
+  })
+  const link = await getLinkRequest.json()
+  return link.data.link
+}
 
 const FormikForm = ({ actionSubmit, initialState }) => (
   <FormContainer>
