@@ -12,7 +12,7 @@ class AddEventContainer extends Component {
   render() {
     const { loading, addEvent } = this.props;
     const initialState = {
-      title: 'ss',
+      title: '',
       desc: '',
       location: '',
       imageUrl: "https://i.imgur.com/216orqx.png"
