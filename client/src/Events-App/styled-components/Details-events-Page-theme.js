@@ -9,6 +9,8 @@ export const Section = styled.section`
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+
 
   p {
     color: rgb(112, 112, 112);

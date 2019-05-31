@@ -57,6 +57,17 @@ export const getEventByTitle = (title) => {
   }
 }
 
+export const getEventById = (id) => {
+  return (dispatch) => {
+    dispatch({type: LOAD_EVENTS})
+
+    axios.get(`/${id}`).then(res => dispatch({
+      type: GET_EVENT,
+      singleEvent: res.data
+    })).catch(err => console.log(err))
+  }
+}
+
 export const getEventByLocation = (location) => {
   return (dispatch) => {
     dispatch({ type: LOAD_EVENTS })

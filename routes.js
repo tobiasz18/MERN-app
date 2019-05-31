@@ -11,7 +11,7 @@ router.post('/', controllers.create);
 // get Specifice Event
 router.get('/search/title/:title', controllers.searchByTitle); //search first match
 router.get('/search/location/:location', controllers.searchByLocation); //search all matches
-
+router.get('/:id', controllers.getEvenById); //get specyfice event by id
 // edit/update specifice event
 router.put('/:id', controllers.updateEvent);
 

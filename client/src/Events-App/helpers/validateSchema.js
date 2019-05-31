@@ -20,7 +20,7 @@ export const AddEventSchema = Yup.object().shape({
     .min(2, 'Too Short!')
     .max(150, 'Too Long!')
     .required('This field is required'),  
-  file: Yup
+  /*file: Yup
     .mixed()
     .required("A file is required")
     .test(
@@ -32,5 +32,5 @@ export const AddEventSchema = Yup.object().shape({
       "fileFormat",
       "Unsupported Format",
       value => value && SUPPORTED_FORMATS.includes(value.type)
-    )
+    )*/
 });

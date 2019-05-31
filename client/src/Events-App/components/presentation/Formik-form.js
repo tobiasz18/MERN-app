@@ -1,4 +1,5 @@
 import React from 'react';
+import {getLink} from '../../helpers/ImagurRequest';
 import {
   FormContainer,
   HeaderForm,
@@ -13,21 +14,19 @@ import {
 import { AddEventSchema } from '../../helpers/validateSchema';
 import { Formik } from 'formik';
 
-const FormAddEvents = ({ getLink, addEvent }) => (
+const FormikForm = ({ actionSubmit, initialState }) => (
   <FormContainer>
     <Formik
-      initialValues={{
-        title: '',
-        desc: '',
-        location: '',
-        file: undefined
-
-      }}
+      initialValues={initialState}
       onSubmit={async (values) => {
         const { file, ...rest } = values
-        const linkToImage = await getLink(file)
-        addEvent({...rest, imageUrl: linkToImage})     
-      }}
+        if(file) {
+          const linkToImage = await getLink(file)
+          actionSubmit({...rest, imageUrl: linkToImage})    
+        } else {
+          actionSubmit({...rest})     
+        }
+    }}
       validationSchema={AddEventSchema}
       render={({
         values,
@@ -97,14 +96,12 @@ const FormAddEvents = ({ getLink, addEvent }) => (
                     <input type="date" name="date" onChange={handleChange} value={values.date}></input>
                 </Label>
                 <Label>
-                    <SpanContent>Image<SpanRequired>*</SpanRequired>                      
+                    <SpanContent>Image                    
                     </SpanContent>                  
                       <input name="file" type="file" onChange={(event) => {
                         setFieldValue("file", event.currentTarget.files[0]);
                       }} />
-                      {errors.file && touched.file ? (
-                        <ErrorMessage>{errors.file}</ErrorMessage>
-                      ) : null}   
+
                 </Label> 
                 <Label>                    
                     <SubmitButton type='submit' >Submit</SubmitButton>
@@ -118,4 +115,5 @@ const FormAddEvents = ({ getLink, addEvent }) => (
 
 
 
-export default FormAddEvents
+export default FormikForm
+

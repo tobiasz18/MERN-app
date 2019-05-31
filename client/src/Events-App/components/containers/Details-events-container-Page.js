@@ -15,6 +15,7 @@ class EventDetailsContainer extends Component {
 
   componentDidMount = () => {
    const title = this.props.match.params.title.replace(/_/g, ' ')
+   console.log(title)
    this.props.getEventByTitle(title)
   }
 
@@ -26,7 +27,7 @@ class EventDetailsContainer extends Component {
   }
 
   render() {
-  console.log(this.state)
+  console.log(this.state, 'state z detail;s')
     return (
       <Article>
         {this.state.data ? 

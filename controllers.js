@@ -28,7 +28,9 @@ exports.create = async (req, res, next) => {
 
 exports.searchByTitle = async (req, res, next) => {
   try {
-    const singleEvent = await Event.findOne({title: req.params.title}).exec()
+    const singleEvent = await Event.findOne({title:
+      { $regex: new RegExp("^" + req.params.title.toLowerCase(), "i") } }).exec()
+
 
     res.json(singleEvent)
 
@@ -56,6 +58,17 @@ exports.updateEvent = async (req, res, next) => {
     Event.findOne({id: req.params.id}).exec()
     .then(resp => res.json(resp))
 
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
+
+exports.getEvenById = async (req, res) => {
+  try {
+   const event = await Event.findOne({id: req.params.id}).exec()
+
+    res.json(event)
+    
   } catch (error) {
     res.status(500).send(error)
   }
