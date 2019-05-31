@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getEventByTitle } from '../../actions';
+import { getEventByTitle, removeEvent } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
 import { Link } from 'react-router-dom';
@@ -26,8 +26,16 @@ class EventDetailsContainer extends Component {
     }
   }
 
+   removeEvent = () => {
+     if(this.state.data) {
+        this.props.removeEvent(this.state.data.id)
+     } else {
+       alert('Something wrong, wait a little')
+     }
+   }
+  
   render() {
-  console.log(this.state, 'state z detail;s')
+
     return (
       <Article>
         {this.state.data ? 
@@ -38,10 +46,13 @@ class EventDetailsContainer extends Component {
             <p>Location: {this.state.data.location}</p>
             <p>Date event: {this.state.data.date}</p>
             <p>Organizers by {this.state.data.organization}</p>
-            <Link to={`/edit/${this.state.data.id}`}>Edit</Link>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <Link to={`/edit/${this.state.data.id}`}>Edit</Link>
+              <button  style={{dosplay: 'flex'}} onClick={this.removeEvent}>Remove</button>
+            </div>         
           </Section> :
           <h1>Loading...</h1> 
-         }  
+         }               
       </Article>
     )
   }
@@ -52,4 +63,4 @@ const mapStateToProps = state => ({
   loading:  state.loading
 })
 
-export default connect(mapStateToProps, {getEventByTitle})(EventDetailsContainer)
+export default connect(mapStateToProps, {getEventByTitle, removeEvent})(EventDetailsContainer)

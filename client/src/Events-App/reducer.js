@@ -1,5 +1,5 @@
 
-import { GET_EVENTS, LOAD_EVENTS, ADD_EVENT, GET_EVENT, SEARCH_EVENTS, EDIT_EVENT } from './constants'
+import { GET_EVENTS, LOAD_EVENTS, ADD_EVENT, GET_EVENT, SEARCH_EVENTS, EDIT_EVENT, REMOVE_EVENT } from './constants'
 
 const initialState = {
   events: [],
@@ -34,6 +34,10 @@ const events = (state = initialState, action) => {
       return {
         ...state, loading: false, events: {...state.events, [action.updated.id]: action.updated}
       }    
+    case REMOVE_EVENT: 
+      return {
+        ...state, loading: false
+      }  
     case LOAD_EVENTS: 
       return {
         ...state,

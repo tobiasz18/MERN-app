@@ -8,7 +8,8 @@ import {
   ADD_EVENT,
   GET_EVENT,
   SEARCH_EVENTS,
-  EDIT_EVENT
+  EDIT_EVENT,
+  REMOVE_EVENT
 } from './constants';
 // set api to development environment
 const url = process.env.NODE_ENV === 'production' ? '/api' : `http://localhost:${process.env.PORT || 5000}/api`;
@@ -32,7 +33,7 @@ export const getEvents = () => {
   }
 }
 
-export const addEvent = (data) => {
+export const addEvent = data => {
   return (dispatch) => {
     dispatch({ type: LOAD_EVENTS })
 
@@ -45,7 +46,7 @@ export const addEvent = (data) => {
 }
 
 
-export const getEventByTitle = (title) => {
+export const getEventByTitle = title => {
   return (dispatch) => {
     dispatch({ type: LOAD_EVENTS })
 
@@ -57,7 +58,7 @@ export const getEventByTitle = (title) => {
   }
 }
 
-export const getEventById = (id) => {
+export const getEventById = id => {
   return (dispatch) => {
     dispatch({type: LOAD_EVENTS})
 
@@ -68,7 +69,7 @@ export const getEventById = (id) => {
   }
 }
 
-export const getEventByLocation = (location) => {
+export const getEventByLocation = location => {
   return (dispatch) => {
     dispatch({ type: LOAD_EVENTS })
 
@@ -85,13 +86,24 @@ export const getEventByLocation = (location) => {
   }
 }
 
-export const editEvet = (data) => {
+export const editEvet = data => {
   return (dispatch) => {
     dispatch({ type: LOAD_EVENTS })
-    console.log(data)
+
     axios.put(`/${data.id}`, data).then(res => dispatch({
       type: EDIT_EVENT,
       updated: res.data
+    }))
+  }
+}
+
+export const removeEvent = id => {
+  return (dispatch) => {
+    dispatch({type: LOAD_EVENTS})
+
+    axios.delete(`/${id}`).then(dispatch => ({
+      type: REMOVE_EVENT,
+      id
     }))
   }
 }
