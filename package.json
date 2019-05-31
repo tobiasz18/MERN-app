@@ -1,6 +1,9 @@
 {
   "name": "reactplusrestapi",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": "Rest api with connect react",
   "main": "index.js",
   "dependencies": {
