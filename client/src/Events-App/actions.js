@@ -101,7 +101,7 @@ export const removeEvent = id => {
   return (dispatch) => {
     dispatch({type: LOAD_EVENTS})
 
-    axios.delete(`/${id}`).then(dispatch => ({
+    axios.delete(`/${id}`).then(() => dispatch({
       type: REMOVE_EVENT,
       id
     }))

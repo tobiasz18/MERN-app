@@ -23,7 +23,7 @@ class AddEventContainer extends Component {
         <img src={loader}/>
       </LoaderContainer> :
       <div>
-        <FormikForm initialState={initialState} actionSubmit={addEvent}/> 
+        <FormikForm initialState={initialState} flag={false} location={this.props} actionSubmit={addEvent}/> 
       </div>
     )
   }

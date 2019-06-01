@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getEventByTitle, removeEvent } from '../../actions';
+import { getEventByTitle, removeEvent, getEvents } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
 import { Link } from 'react-router-dom';
@@ -15,27 +15,29 @@ class EventDetailsContainer extends Component {
 
   componentDidMount = () => {
    const title = this.props.match.params.title.replace(/_/g, ' ')
-   console.log(title)
+    console.log('titie', title)
    this.props.getEventByTitle(title)
+ 
   }
 
   componentDidUpdate = (prevProps) => {
     // To prevent loadig the same data during substitution 
-   if (this.props.singleEvent !== prevProps.singleEvent) {
+    if (this.props.singleEvent !== prevProps.singleEvent) {
       this.setState({data: this.props.singleEvent[0]})
     }
   }
 
-   removeEvent = () => {
-     if(this.state.data) {
-        this.props.removeEvent(this.state.data.id)
-     } else {
-       alert('Something wrong, wait a little')
-     }
-   }
+  removeEvent = () => {
+    if(this.state.data) {
+      this.props.removeEvent(this.state.data.id)
+      this.props.history.push('/')
+      this.props.getEvents()
+    } else {
+      alert('Something wrong, wait a little')
+    }
+  }
   
   render() {
-
     return (
       <Article>
         {this.state.data ? 
@@ -63,4 +65,4 @@ const mapStateToProps = state => ({
   loading:  state.loading
 })
 
-export default connect(mapStateToProps, {getEventByTitle, removeEvent})(EventDetailsContainer)
+export default connect(mapStateToProps, {getEventByTitle, getEvents, removeEvent})(EventDetailsContainer)

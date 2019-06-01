@@ -1,5 +1,5 @@
 import React from 'react';
-import {getLink} from '../../helpers/ImagurRequest';
+import { getLink } from '../../helpers/ImagurRequest';
 import {
   FormContainer,
   HeaderForm,
@@ -14,8 +14,7 @@ import {
 import { AddEventSchema } from '../../helpers/validateSchema';
 import { Formik } from 'formik';
 
-
-const FormikForm = ({ actionSubmit, initialState }) => (
+const FormikForm = ({ flag, actionSubmit, initialState, location }) => (
   <FormContainer>
     <Formik
       initialValues={initialState}
@@ -27,6 +26,9 @@ const FormikForm = ({ actionSubmit, initialState }) => (
         } else {
           actionSubmit({...rest})     
         }
+        console.log(flag)
+        flag ? location.history.push(`/events/${values.title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`) : location.history.push(`/`)
+        
     }}
       validationSchema={AddEventSchema}
       render={({

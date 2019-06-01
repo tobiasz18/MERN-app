@@ -11,7 +11,6 @@ const initialState = {
 const events = (state = initialState, action) => {
   switch(action.type) {
     case GET_EVENTS:
-      console.log(action, 'z ')
       return {  
         ...state,    
         events: action.events,
@@ -32,7 +31,8 @@ const events = (state = initialState, action) => {
       } 
     case EDIT_EVENT:
       return {
-        ...state, loading: false, events: {...state.events, [action.updated.id]: action.updated}
+        ...state, loading: false, events: {...state.events, [action.updated.id]: action.updated},
+        singleEvent: {[action.updated.id]: action.updated}
       }    
     case REMOVE_EVENT: 
       return {

@@ -15,17 +15,13 @@ class EditEventContainer extends Component {
     this.props.getEventById(this.props.match.params.id)
   }
   
-  editEventFun = () => {
-    this.props.editEvet({title: 'tobiasz', id: this.props.match.params.id})
-  }
-
   render() {
     console.log(this.props.singleEvent[0], 'z edot')
     return(
       <div style={{display: 'flex', justifyContent: 'center'}}>
         {
           this.props.singleEvent[0] == undefined ? <img src={Spinner} /> : 
-          <FormikForm actionSubmit={this.props.editEvet} initialState={this.props.singleEvent[0]} />
+          <FormikForm actionSubmit={this.props.editEvet} location={this.props} flag={true} initialState={this.props.singleEvent[0]} />
         }
       </div>
     )
