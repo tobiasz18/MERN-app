@@ -1,41 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Logo, Nav, Ul, NavContainer }  from '../../styled-components/navigation-theme';
-import search from '../../img/search.png'
-import { Z_BLOCK } from 'zlib';
+import search from '../../img/search.png';
+import { useHideOnScrolled } from '../../helpers/useEffectHook';
 
 const Navigation = () => {
-
-  const useHideOnScrolled = () => {
-    const [hidden, setHidden] = useState(false);
+  const hidden = useHideOnScrolled(useState, useEffect);
   
-    const handleScroll = () => {
-      const top = window.pageYOffset || document.documentElement.scrollTop;
-      setHidden(top > 200);
-    };
-  
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-  
-    return hidden;
-  };
-  const hidden = useHideOnScrolled();
-  const animated = hidden ? {
-    position: 'fixed',
-    width: '100%',
-    padding: 0,
-
-  } : {
-    transition:'0.14s',
-    position: 'inherit'
-  }
-
   return (
-    <Nav style={animated}>
+    <Nav positionProp={hidden}>
       <NavContainer>
         <Link style={{color: 'black'}} to="/"><Logo>Events Home</Logo></Link>
         <Ul>

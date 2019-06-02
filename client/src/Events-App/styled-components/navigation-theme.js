@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+  transition: '2s';
   border-bottom: 1px solid #e6e6e6;
   background: #fdfdfd;
-  padding: 7px 0;
-
+  position: ${props => props.positionProp ? 'fixed' : 'inherit'}
+  padding: ${props => props.positionProp ? ' 0' : '7px 0'}
+  transition: ${props => props.positionProp ? '0.1s' : '0'}
+  width: 100%;
+  z-index: 1;
 `
 export const NavContainer = styled.div`
   max-width: 1100px;
