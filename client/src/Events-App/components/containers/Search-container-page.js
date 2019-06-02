@@ -4,11 +4,14 @@ import EventSearchList from './Search-event-list-container';
 import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-container-page-theme';
 import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
+import Notfound from '../presentation/NotFound';
+import {Helmet} from "react-helmet";
 class SearchContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: this.props.location.pathname.split('/')[2]
+      value: this.props.location.pathname.split('/')[2],
+      text: ''
     }
     this.myRef = React.createRef();
   }
@@ -21,8 +24,12 @@ class SearchContainer extends React.Component {
   }
 
   render() {
+    const checkPath = this.state.value ? `${this.props.match.url}/${this.state.value}` : '/search';
     return (
       <ContainerArticle>
+        <Helmet>
+          <title>Search by location - Events page</title>
+        </Helmet>
         <ContainerSection1>   
           <input 
             type="text" 
@@ -31,10 +38,10 @@ class SearchContainer extends React.Component {
             placeholder="Search by location" 
             onChange={this.handleChange} 
           />
-          <Link to={`${this.props.match.url}/${this.state.value}`}>Search</Link>    
+          <Link to={checkPath}>Search</Link>    
         </ContainerSection1>  
         <ContainerSection2>
-          <Route path={`${this.props.match.url}/:location`} component={EventSearchList}/>
+          <Route exact path={`${this.props.match.url}/:location`} component={EventSearchList}/>
         </ContainerSection2>
       </ContainerArticle> 
     )

@@ -4,6 +4,7 @@ import { getEventByTitle, removeEvent, getEvents } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 class EventDetailsContainer extends Component {
 
   constructor(props) {
@@ -38,8 +39,12 @@ class EventDetailsContainer extends Component {
   }
   
   render() {
+    const titleText = this.state.data ? this.state.data.title : 'loading';
     return (
       <Article>
+        <Helmet>
+          <title>{titleText} - Events page</title>
+        </Helmet>
         {this.state.data ? 
           <Section>
             <SpanHeader>{this.state.data.title}</SpanHeader>

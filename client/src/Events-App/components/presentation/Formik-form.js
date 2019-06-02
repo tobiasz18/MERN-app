@@ -14,7 +14,7 @@ import {
 import { AddEventSchema } from '../../helpers/validateSchema';
 import { Formik } from 'formik';
 
-const FormikForm = ({ flag, actionSubmit, initialState, location }) => (
+const FormikForm = ({ flag, actionSubmit, initialState, location, title }) => (
   <FormContainer>
     <Formik
       initialValues={initialState}
@@ -40,7 +40,7 @@ const FormikForm = ({ flag, actionSubmit, initialState, location }) => (
         setFieldValue
       }) => (
         <FormContainer>
-            <HeaderForm>Add new event </HeaderForm>
+            <HeaderForm>{title}</HeaderForm>
             <form onSubmit={handleSubmit}>
                 <Label>
                     <SpanContent>Title<SpanRequired >*</SpanRequired></SpanContent>

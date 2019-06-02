@@ -16,12 +16,16 @@ class EditEventContainer extends Component {
   }
   
   render() {
-    console.log(this.props.singleEvent[0], 'z edot')
     return(
       <div style={{display: 'flex', justifyContent: 'center'}}>
         {
           this.props.singleEvent[0] == undefined ? <img src={Spinner} /> : 
-          <FormikForm actionSubmit={this.props.editEvet} location={this.props} flag={true} initialState={this.props.singleEvent[0]} />
+          <FormikForm 
+            actionSubmit={this.props.editEvet} 
+            location={this.props} flag={true} 
+            initialState={this.props.singleEvent[0]} 
+            title={'Edit Event'}
+          />
         }
       </div>
     )

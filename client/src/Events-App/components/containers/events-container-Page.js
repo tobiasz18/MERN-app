@@ -4,7 +4,7 @@ import { getEvents } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import EventsList from '../presentation/EventsList';
 import SearchSingleEvent from '../presentation/SearchSingleEvent';
-
+import {Helmet} from "react-helmet";
 class EventsContainer extends Component {
 
   componentDidMount() {
@@ -23,6 +23,9 @@ class EventsContainer extends Component {
     
     return (
       <Article>   
+        <Helmet>
+          <title>Home - Events page</title>
+        </Helmet>
         {
           loading ? 
             <h5>Loading...</h5> :

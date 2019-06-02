@@ -25,7 +25,7 @@ class EventSearchList extends React.Component {
       <React.Fragment>
         {
           this.props.searchEvents.map(item => <SearchSingleEvent
-            key={item.id} image={item.imageUrl} title={item.title} />)
+            key={item.id} titleText={this.props.match.params.location} image={item.imageUrl} title={item.title} />)
         }
       </React.Fragment>
     )
