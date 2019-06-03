@@ -4,7 +4,7 @@ import { GET_EVENTS, LOAD_EVENTS, ADD_EVENT, GET_EVENT, SEARCH_EVENTS, EDIT_EVEN
 const initialState = {
   events: [],
   singleEvent: {},
-  searchEvents: [],
+  searchEvents: {},
   loading: false
 }
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
 import { Article } from '../../styled-components/global-theme';
 import EventsList from '../presentation/EventsList';
-import SearchSingleEvent from '../presentation/SearchSingleEvent';
+
 import {Helmet} from "react-helmet";
 class EventsContainer extends Component {
 
@@ -29,9 +29,13 @@ class EventsContainer extends Component {
         {
           loading ? 
             <h5>Loading...</h5> :
-            events.map(item => <EventsList key={item.id} 
-              title={item.title} desc={item.desc} checkLengthDesc={this.checkLengthDesc} location={item.location} image={item.imageUrl}/>).reverse()
-              
+            events.map(item => <EventsList 
+              key={item.id} 
+              title={item.title} 
+              desc={item.desc} 
+              checkLengthDesc={this.checkLengthDesc} 
+              location={item.location} 
+              image={item.imageUrl}/>).reverse()            
             }
       </Article>
     )

@@ -6,11 +6,13 @@ import SearchSingleEvent from '../presentation/SearchSingleEvent';
 class EventSearchList extends React.Component {
 
   static defaultProps = {
-    searchEvents: []
+
   }
 
   componentDidMount = () => {
+    console.log(this.props.match.params.location)
     this.props.getEventByLocation(this.props.match.params.location)
+   
   }
 
   componentDidUpdate = (prevProps) => { //update wen component get new params
@@ -20,6 +22,7 @@ class EventSearchList extends React.Component {
   }
 
   render() {
+
 
     return (
       <React.Fragment>
@@ -32,8 +35,16 @@ class EventSearchList extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  searchEvents: Object.values(state.searchEvents)
-})
+const mapStateToProps = state => {
+  if(state.searchEvents) {
+    return {
+      searchEvents: Object.values(state.searchEvents)
+    }
+  } 
+  return {
+    searchEvents: []
+  }
+}
+ 
 
 export default connect(mapStateToProps, {getEventByLocation})(EventSearchList);

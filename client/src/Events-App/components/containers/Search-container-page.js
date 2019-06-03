@@ -4,7 +4,7 @@ import EventSearchList from './Search-event-list-container';
 import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-container-page-theme';
 import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
-import Notfound from '../presentation/NotFound';
+
 import {Helmet} from "react-helmet";
 class SearchContainer extends React.Component {
   constructor(props) {
