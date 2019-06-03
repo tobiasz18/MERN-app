@@ -14,7 +14,7 @@ const SearchSingleEvent = ({image, title, titleText}) => (
       <div>
         <span>{title}</span>
       </div>
-    </Link>
+    </Link> 
   </Figure>
 )
 
