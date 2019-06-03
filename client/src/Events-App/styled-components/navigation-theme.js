@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   transition: '2s';
-  border-bottom: 1px solid #e6e6e6;
+ /*border-bottom: 1px solid #e6e6e6;*/;
+  box-shadow: 0 0 0.5rem rgba(83,78,76,.5);
   background: #fdfdfd;
   position: ${props => props.positionProp ? 'fixed' : 'inherit'}
   padding: ${props => props.positionProp ? ' 0' : '7px 0'}
