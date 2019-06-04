@@ -11,7 +11,9 @@ const EventsList = ({ title, desc, image, location, checkLengthDesc }) => (
     <Text>
      <div>
         <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`}>{title}</Link>
-        <p>{checkLengthDesc(desc)}</p>
+        <p>{checkLengthDesc(desc)}... 
+          <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`}>More information click here</Link>
+        </p>
       </div>
       <div>
         <div>location: {location}</div>

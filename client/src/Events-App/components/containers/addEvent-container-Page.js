@@ -15,6 +15,7 @@ class AddEventContainer extends Component {
       title: '',
       desc: '',
       location: '',
+      organization: 'unknown',
       imageUrl: "https://i.imgur.com/216orqx.png"
     }
     return (

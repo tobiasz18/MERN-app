@@ -72,17 +72,6 @@ const FormikForm = ({ flag, actionSubmit, initialState, location, title }) => (
                       ) : <TextInput name="location" value={values.location} onChange={handleChange}/>}       
                 </Label>
                 <Label>
-                    <SpanContent>Category</SpanContent>
-                    <Select name="category" value={values.category} onChange={handleChange}>      
-                      <option value="sport">sport</option>
-                      <option value="Festival">Festival</option>
-                      <option value="manifestations">manifestations </option>
-                      <option value="concert ">concert </option>
-                      <option value="Art">Art</option>
-                      <option value="Another">Another</option>
-                    </Select>
-                </Label>
-                <Label>
                     <SpanContent>Description<SpanRequired> *</SpanRequired></SpanContent>
                     {errors.desc && touched.desc ? (
                         <div>

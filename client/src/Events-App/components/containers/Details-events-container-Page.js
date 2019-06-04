@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getEventByTitle, removeEvent, getEvents } from '../../actions';
-import { Article } from '../../styled-components/global-theme';
-import { Img, Section, SpanHeader } from '../../styled-components/Details-events-Page-theme';
+
+import { Img, Section, SpanHeader, Div } from '../../styled-components/Details-events-Page-theme';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 class EventDetailsContainer extends Component {
@@ -16,9 +16,7 @@ class EventDetailsContainer extends Component {
 
   componentDidMount = () => {
    const title = this.props.match.params.title.replace(/_/g, ' ')
-    console.log('titie', title)
    this.props.getEventByTitle(title)
- 
   }
 
   componentDidUpdate = (prevProps) => {
@@ -37,30 +35,31 @@ class EventDetailsContainer extends Component {
       alert('Something wrong, wait a little')
     }
   }
-  
+
   render() {
     const titleText = this.state.data ? this.state.data.title : 'loading';
+
     return (
-      <Article>
+      <div>
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
         {this.state.data ? 
           <Section>
+            <Div>
+              <Link to={`/edit/${this.state.data.id}`}>Edit</Link>  
+              <button  style={{dosplay: 'flex'}} onClick={this.removeEvent}>Remove</button>            
+            </Div>        
             <SpanHeader>{this.state.data.title}</SpanHeader>
-            <p>{this.state.data.desc}</p>
-            <Img src={this.state.data.imageUrl} />
             <p>Location: {this.state.data.location}</p>
-            <p>Date event: {this.state.data.date}</p>
+            <Img src={this.state.data.imageUrl} />
             <p>Organizers by {this.state.data.organization}</p>
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
-              <Link to={`/edit/${this.state.data.id}`}>Edit</Link>
-              <button  style={{dosplay: 'flex'}} onClick={this.removeEvent}>Remove</button>
-            </div>         
-          </Section> :
-          <h1>Loading...</h1> 
+            <p>{this.state.data.desc}</p>  
+            <p>Date event: {this.state.data.date}</p> 
+            </Section>  : 
+            <h1>Loading...</h1> 
          }               
-      </Article>
+      </div>
     )
   }
 }

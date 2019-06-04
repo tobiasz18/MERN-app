@@ -10,8 +10,8 @@ const SUPPORTED_FORMATS = [
 
 export const AddEventSchema = Yup.object().shape({
   title: Yup.string()
-    .min(3, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(30, 'Too Short!')
+    .max(120, 'Too Long!')
     .required('This field is required'),
   desc: Yup.string()
     .min(200, 'Too Short!')

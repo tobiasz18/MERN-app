@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import { getEvents } from '../../actions';
-import { Article } from '../../styled-components/global-theme';
+import { Article } from '../../styled-components/eventsContainer-theme';
 import EventsList from '../presentation/EventsList';
 
 import {Helmet} from "react-helmet";
@@ -13,7 +13,7 @@ class EventsContainer extends Component {
 
   checkLengthDesc = (paragraph) => {
     if(paragraph.length > 50) {
-      return `${paragraph.slice(0,160)}...`
+      return `${paragraph.slice(0,160)}`
     }
     return paragraph
   }

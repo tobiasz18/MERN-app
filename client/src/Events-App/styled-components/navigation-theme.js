@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   transition: '2s';
  /*border-bottom: 1px solid #e6e6e6;*/;
   box-shadow: 0 0 0.5rem rgba(83,78,76,.5);
-  background: #fdfdfd;
+  background: #1a1a1a;
   position: ${props => props.positionProp ? 'fixed' : 'inherit'}
   padding: ${props => props.positionProp ? ' 0' : '7px 0'}
   transition: ${props => props.positionProp ? '0.1s' : '0'}
@@ -28,6 +28,7 @@ export const Logo = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
   font-size: 25px;
   font-family: 'Stylish', sans-serif;
+  color: white;
 `
 export const Ul = styled.ul`
   display: flex;
@@ -41,12 +42,12 @@ export const Ul = styled.ul`
     
     a {
       text-decoration: none;
-      color: #0e0e0e;
+      color: #fff;
       letter-spacing: 0.8px;
       padding-right: 3px;
 
       &:hover {
-        color: #333131bd;
+        color: #ff7e28;
       }     
     }
   }

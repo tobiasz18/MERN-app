@@ -18,19 +18,21 @@ export const ContainerSection1 = styled.section`
   padding: 50px 47px;
   width: 100%;
   text-align: center;
-  background-color: #4c4a4a
+  background-color: #ffffff;
   box-sizing: border-box;
+  box-shadow: 0 2px 7px white;
 
   input {
-    background: #fff;
+    background: #1a1a1a;
     border: 1px solid #e2dddd;
     padding: 10px 32px;
     font-size: 17px;
     outline-color: #ff8628;
+    color: white;
   }
 
   a {
-    background: #fea66b;
+    background: #fd6600;
     border: 0;
     cursor: pointer;
     padding: 11px 30px;

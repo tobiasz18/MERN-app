@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  max-width: 600px;
+  max-width: 800px;
+  min-height: 400px
 `
 export const Section = styled.section`
   margin: auto;
   margin-top: 75px;
-  max-width: 600px;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-
 
   p {
     color: rgb(112, 112, 112);
@@ -26,4 +26,39 @@ export const SpanHeader = styled.span`
   font-family: Sky Text,Sans-serif;
   color: #4a4a4a;
   font-size: 2.3em;
+`
+export const Div = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+
+  a {
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #4c4a4a;
+    color: #bbbbbb;
+    padding: 5px 20px;
+    font-weight: 600;
+    margin-right: 5px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #4c4a4a;
+    color: #bbbbbb;
+    padding: 5px 20px;
+    font-weight: 600;
+
+    &:hover {
+      color: white;
+    }
+  }
 `
