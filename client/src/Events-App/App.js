@@ -9,6 +9,7 @@ import EventDetailsContainer from './components/containers/Details-events-contai
 import SearchContainer from './components/containers/Search-container-page';
 import EditEventContainer from './components/containers/Edit-event-container';
 import Notfound from './components/presentation/NotFound';
+import Footer from './components/presentation/Footer';
 
 const App = () => (
   <Provider store={store}>
@@ -22,7 +23,9 @@ const App = () => (
         <Route  path="/edit/:id" component={EditEventContainer} />
         <Route  component={Notfound} />
       </Switch>
+    
     </Router>
+    <Footer />
   </Provider>
 )
 

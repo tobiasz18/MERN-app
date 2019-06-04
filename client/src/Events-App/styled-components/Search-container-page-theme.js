@@ -8,6 +8,7 @@ export const ContainerArticle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 678px;
 
   h2 {
     font-weight: 100;
