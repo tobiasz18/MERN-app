@@ -25,19 +25,19 @@ export const Figure =  styled.figure`
     justify-content: center;
     align-items: flex-end;
 
-    span {
-      @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-      padding: 10px;
-      text-decoration: none;
-      color: #fff;
-      background: rgba(0,0,0,0.3);
-      width: 100%;
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-
     &:hover  {
       text-decoration: underline;
       opacity: 1;
     }
   }
+`
+
+export const Span = styled.span`
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
 `

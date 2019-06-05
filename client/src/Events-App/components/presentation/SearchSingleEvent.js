@@ -1,5 +1,5 @@
 import React from 'react';
-import { Figure } from '../../styled-components/SearchSingleEvent-theme';
+import { Figure, Span } from '../../styled-components/SearchSingleEvent-theme';
 import { Link } from 'react-router-dom';
 import {Helmet, Child} from "react-helmet";
 
@@ -12,7 +12,7 @@ const SearchSingleEvent = ({image, title, titleText}) => (
     <Link to={`/events/${title}`}>
       <img src={image} /> 
       <div>
-        <span>{title}</span>
+        <Span>{title}</Span>
       </div>
     </Link> 
   </Figure>
