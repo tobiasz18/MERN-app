@@ -3,7 +3,7 @@ export const useHideOnScrolled = (useState, useEffect) => {
 
   const handleScroll = () => {
     const top = window.pageYOffset || document.documentElement.scrollTop;
-    setHidden(top > 250);
+    setHidden(top > 350);
   };
 
   useEffect(() => {

@@ -5,6 +5,12 @@ export const Section = styled.section`
   margin-top: 25px;
   padding-bottom: 10px;
   border-bottom: 1px solid #DDD!important;
+  width: 100%;
+
+  div:nth-child(2) {
+    width: 100%;
+    overflow: hidden;
+  }
 `
 export const Image = styled.div`
   width: 300px;

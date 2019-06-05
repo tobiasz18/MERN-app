@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   transition: '2s';
-
   box-shadow: 0 0 0.5rem rgba(83,78,76,.5);
   background: #1a1a1a;
   position: ${props => props.positionProp ? 'fixed' : 'inherit'}

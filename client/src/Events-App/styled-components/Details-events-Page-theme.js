@@ -18,6 +18,8 @@ export const Section = styled.section`
     font-weight: 400px;
     font-weight: 400;
     font-family: Sky Text,Sans-serif;
+    overflow: hidden;
+    line-height: 20px;
   }
 `
 export const SpanHeader = styled.span`

@@ -31,9 +31,8 @@ class EventDetailsContainer extends Component {
       this.props.removeEvent(this.state.data.id)
       this.props.history.push('/')
       this.props.getEvents()
-    
     } else {
-      alert(`You can not delete older events, just those created by yourself`)
+      alert(`You can not delete older events, only those created by yourself`)
     }
   }
 
