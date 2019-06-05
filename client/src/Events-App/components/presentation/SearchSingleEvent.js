@@ -10,7 +10,7 @@ const SearchSingleEvent = ({image, title, titleText}) => (
     </Helmet>
 
     <Link to={`/events/${title}`}>
-      <img src={image} />
+      <img src={image} /> 
       <div>
         <span>{title}</span>
       </div>

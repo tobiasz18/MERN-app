@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Img = styled.img`
   max-width: 800px;
-  min-height: 400px
+  min-height: 460px
 `
 export const Section = styled.section`
   margin: auto;
