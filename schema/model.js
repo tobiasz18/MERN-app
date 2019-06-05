@@ -6,7 +6,7 @@ const EventSchema = new Schema({
   desc: { type: String, required: true },
   date: {type: String },
   location: { type: String },
-  category: { type: String },
+  organization: { type: String },
   imageUrl: { type: String, required: true },
   removeFlag: {type: Boolean},
   id: { type: String },
