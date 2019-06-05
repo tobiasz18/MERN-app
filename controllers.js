@@ -16,7 +16,7 @@ exports.create = async (req, res, next) => {
   try {
     const event = new Event(req.body)
     event.id = uuid().split('-')[0];
-
+    event.removeFlag = true;
     await event.save()
     
     res.json(event)

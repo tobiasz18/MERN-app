@@ -27,12 +27,13 @@ class EventDetailsContainer extends Component {
   }
 
   removeEvent = () => {
-    if(this.state.data) {
+    if(this.state.data.removeFlag) {
       this.props.removeEvent(this.state.data.id)
       this.props.history.push('/')
       this.props.getEvents()
+    
     } else {
-      alert('Something wrong, wait a little')
+      alert(`You can not delete older events, just those created by yourself`)
     }
   }
 
