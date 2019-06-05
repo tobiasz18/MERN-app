@@ -18,4 +18,4 @@ const SearchSingleEvent = ({image, title, titleText}) => (
   </Figure>
 )
 
-export default SearchSingleEvent;
+export default SearchSingleEvent; 
