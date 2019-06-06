@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getEventByTitle, removeEvent, getEvents } from '../../actions';
 
-import { Img, Section, SpanHeader, Div } from '../../styled-components/Details-events-Page-theme';
-import { Link } from 'react-router-dom';
+
 import { Helmet } from 'react-helmet';
+import DetailEvent from '../presentation/DetailsSingleEvent';
 class EventDetailsContainer extends Component {
 
   constructor(props) {
@@ -44,20 +44,7 @@ class EventDetailsContainer extends Component {
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
-        {this.state.data ? 
-          <Section>
-            <Div>
-              <Link to={`/edit/${this.state.data.id}`}>Edit</Link>  
-              <button  style={{dosplay: 'flex'}} onClick={this.removeEvent}>Remove</button>            
-            </Div>        
-            <SpanHeader>{this.state.data.title}</SpanHeader>
-            <p>Location: {this.state.data.location}</p>
-            <Img src={this.state.data.imageUrl} />
-            <p>Organizers by {this.state.data.organization}</p>
-            <p>{this.state.data.desc}</p>  
-            <p>Date event: {this.state.data.date}</p> 
-          </Section>  : 
-          <h1>Loading...</h1> 
+        {this.state.data ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <h1>Loading...</h1> 
          }               
       </div>
     )

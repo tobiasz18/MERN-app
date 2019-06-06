@@ -8,7 +8,6 @@ class EventSearchList extends React.Component {
   componentDidMount = () => {
     console.log(this.props.match.params.location)
     this.props.getEventByLocation(this.props.match.params.location)
-    console.log('hellow from event list container')
   }
 
   componentDidUpdate = (prevProps) => { //update wen component get new params

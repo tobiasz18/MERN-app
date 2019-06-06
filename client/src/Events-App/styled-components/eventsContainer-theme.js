@@ -19,6 +19,5 @@ export const Article = styled.article`
   flex-wrap: wrap;
   background: white;
   margin-top: 150px;
-
   box-shadow: 14px 3px 16px #f1f1f1;
 `

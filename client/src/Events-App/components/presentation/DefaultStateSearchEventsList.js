@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import SearchSingleEvent from '../presentation/SearchSingleEvent';
 
-
 const DefaultStateSearchEventsList = ({events}) => {
 
   return (
