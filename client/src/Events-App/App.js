@@ -15,17 +15,19 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Navigation />
-      <Switch>
-        <Route exact path="/" component={EventsContainer} />
-        <Route  path="/add_event" component={addEventContainer} />
-        <Route  path="/events/:title" component={EventDetailsContainer}  />
-        <Route  path='/search' component={SearchContainer} />
-        <Route  path="/edit/:id" component={EditEventContainer} />
-        <Route  component={Notfound} />
-      </Switch>
-    
+      
+        <Switch>
+          <Route exact path="/" component={EventsContainer} />
+          <Route  path="/add_event" component={addEventContainer} />
+          <Route  path="/events/:title" component={EventDetailsContainer}  />
+          <Route  path='/search' component={SearchContainer} />
+          <Route  path="/edit/:id" component={EditEventContainer} />
+          <Route  component={Notfound} />
+        </Switch>
+       
+  
+      <Footer />
     </Router>
-    <Footer />
   </Provider>
 )
 

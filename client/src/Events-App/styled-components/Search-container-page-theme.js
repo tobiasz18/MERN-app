@@ -8,7 +8,7 @@ export const ContainerArticle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 678px;
+  min-height: 704px;
 
   h2 {
     font-weight: 100;
@@ -51,6 +51,5 @@ export const ContainerSection2 = styled.section`
   max-width: 970px;
   margin-bottom: 75px;
   margin-top: 75px;
-
 `
 

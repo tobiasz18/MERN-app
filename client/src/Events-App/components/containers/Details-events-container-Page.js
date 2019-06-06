@@ -56,8 +56,8 @@ class EventDetailsContainer extends Component {
             <p>Organizers by {this.state.data.organization}</p>
             <p>{this.state.data.desc}</p>  
             <p>Date event: {this.state.data.date}</p> 
-            </Section>  : 
-            <h1>Loading...</h1> 
+          </Section>  : 
+          <h1>Loading...</h1> 
          }               
       </div>
     )

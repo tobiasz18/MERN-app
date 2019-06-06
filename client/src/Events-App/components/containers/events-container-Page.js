@@ -7,8 +7,13 @@ import EventsList from '../presentation/EventsList';
 import {Helmet} from "react-helmet";
 class EventsContainer extends Component {
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.getEvents()
+    document.getElementsByTagName('nav')[0].style.position ='fixed';
+  }
+
+  componentWillUnmount = () => {
+    document.getElementsByTagName('nav')[0].style.position ='inherit';
   }
 
   checkLengthDesc = (paragraph) => {

@@ -1,9 +1,9 @@
-export const useHideOnScrolled = (useState, useEffect) => {
+export const useHideOnScrolled = (useState, useEffect, from) => {
   const [hidden, setHidden] = useState(false);
 
   const handleScroll = () => {
     const top = window.pageYOffset || document.documentElement.scrollTop;
-    setHidden(top > 350);
+    setHidden(top > from);
   };
 
   useEffect(() => {

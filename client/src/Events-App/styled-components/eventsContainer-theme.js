@@ -18,7 +18,7 @@ export const Article = styled.article`
   display: flex;
   flex-wrap: wrap;
   background: white;
-  margin-top: 50px;
+  margin-top: 150px;
 
   box-shadow: 14px 3px 16px #f1f1f1;
 `

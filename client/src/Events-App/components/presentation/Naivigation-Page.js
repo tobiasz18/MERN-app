@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Logo, Nav, Ul, NavContainer }  from '../../styled-components/navigation-theme';
 import search from '../../img/search.png';
-import { useHideOnScrolled } from '../../helpers/useEffectHook';
+import { useHideOnScrolled } from '../../helpers/useEffectHookFixedNav';
 
 const Navigation = () => {
-  const hidden = useHideOnScrolled(useState, useEffect);
+  const hidden = useHideOnScrolled(useState, useEffect, 250);
   
   return (
     <Nav positionProp={hidden}>
