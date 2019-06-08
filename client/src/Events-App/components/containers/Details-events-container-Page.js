@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getEventByTitle, removeEvent, getEvents } from '../../actions';
-
-
 import { Helmet } from 'react-helmet';
 import DetailEvent from '../presentation/DetailsSingleEvent';
+
+import eclipse from '../../img/eclipse.svg'
 class EventDetailsContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      data: null
+      data: null,
+      updateFlag: false
     }
   }
 
   componentDidMount = () => {
-   const title = this.props.match.params.title.replace(/_/g, ' ')
-   this.props.getEventByTitle(title)
+   const title = this.props.match.params.title.replace(/_/g, ' ');
+   this.props.getEventByTitle(title);
   }
 
   componentDidUpdate = (prevProps) => {
     // To prevent loadig the same data during substitution 
     if (this.props.singleEvent !== prevProps.singleEvent) {
-      this.setState({data: this.props.singleEvent[0]})
+      console.log('true')
+      this.setState({data: this.props.singleEvent[0]});
     }
   }
 
   removeEvent = () => {
     if(this.state.data.removeFlag) {
-      this.props.removeEvent(this.state.data.id)
-      this.props.history.push('/')
-      this.props.getEvents()
+      this.props.removeEvent(this.state.data.id);
+      this.props.history.push('/');
+      this.props.getEvents();
     } else {
       alert(`You can not delete older events, only those created by yourself`)
     }
@@ -38,14 +40,27 @@ class EventDetailsContainer extends Component {
 
   render() {
     const titleText = this.state.data ? this.state.data.title : 'loading';
-
+    // to prevent show flashback from earlier state and check did actually data are loaded
+    const condition = this.state.data && this.props.match.params.title.replace(/_/g, ' ') == this.state.data.title;
     return (
-      <div>
+      <div style={{minHeight: '760px', display: 'flex', justifyContent:'center' }}>
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
-        {this.state.data ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <h1>Loading...</h1> 
-         }               
+        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> :
+            <div style={{
+              'display': 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'relative'
+            }}>
+              <h2 style={{position: 'absolute',
+                fontFamily: 'sansSerif',
+                color: 'grey',
+                top: '46%'}}>Loading
+              </h2>
+              <img width="175px" src={eclipse} />
+            </div> }               
       </div>
     )
   }

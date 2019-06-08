@@ -15,7 +15,6 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Navigation />
-      
         <Switch>
           <Route exact path="/" component={EventsContainer} />
           <Route  path="/add_event" component={addEventContainer} />
@@ -24,8 +23,6 @@ const App = () => (
           <Route  path="/edit/:id" component={EditEventContainer} />
           <Route  component={Notfound} />
         </Switch>
-       
-  
       <Footer />
     </Router>
   </Provider>

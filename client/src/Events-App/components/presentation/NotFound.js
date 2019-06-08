@@ -7,7 +7,7 @@ const NotFoundContainer = styled.div`
   margin-top: 20%;
   font-family: sans-serif;
   line-height: 0;
-
+  min-height: 450px;
   h1 {
     font-size: 90px;
     font-weight: 500;

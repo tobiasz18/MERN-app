@@ -5,10 +5,10 @@ import search from '../../img/search.png';
 import { useHideOnScrolled } from '../../helpers/useEffectHookFixedNav';
 
 const Navigation = () => {
-  const hidden = useHideOnScrolled(useState, useEffect, 250);
+  const padding = useHideOnScrolled(useState, useEffect, 92);
   
   return (
-    <Nav positionProp={hidden}>
+    <Nav positionProp={padding}>
       <NavContainer>
         <Link style={{color: 'black'}} to="/"><Logo>Events Home</Logo></Link>
         <Ul>
@@ -23,7 +23,6 @@ const Navigation = () => {
           </li>
         </Ul>
       </NavContainer> 
- 
     </Nav>
   )
 }

@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   transition: 0.3s;
   box-shadow: 0 0 0.5rem rgba(83,78,76,.5);
   background: #1a1a1a;
-  padding: ${props => props.positionProp ? '4px 0' : '7px 0'}
+  padding: ${props => props.positionProp ? '3px 0' : '7px 0'}
   width: 100%;
   z-index: 1;
   top: 0;
