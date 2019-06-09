@@ -7,6 +7,10 @@ export const Section = styled.section`
   max-height: 250px;
   background: #fdfdfd;
   padding: 50px;
+
+  &:last-child {
+    border-bottom: none;
+  }
 `
 
 export const Article = styled.article`
@@ -20,10 +24,10 @@ export const Article = styled.article`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  background: ${props => props.loading ? '#f8f8f8' : 'white'};
+  background: ${props => props.loading ? '#f8f8f8 ' : 'white'};
   justify-content: ${props => props.loading ? 'center' : 'none'};
   margin-top: 150px;
-  box-shadow: ${props => props.loading ? 'none' : '14px 3px 16px #f1f1f1'};
+  box-shadow: ${props => props.loading ? ' none ' : ' 14px 3px 16px #f1f1f1'};
 
 
 

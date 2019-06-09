@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
 import { Article } from '../../styled-components/eventsContainer-theme';
 import EventsList from '../presentation/EventsList';
-
-import eclipse from '../../img/eclipse.svg'
-
 import {Helmet} from "react-helmet";
+import eclipse from '../../img/eclipse.svg';
+import { Div, H2 } from '../../styled-components/LoaderStyle';
 class EventsContainer extends Component {
 
   componentDidMount = () => {
@@ -35,20 +34,11 @@ class EventsContainer extends Component {
         </Helmet>
         {
           loading ? 
-          <div style={{
-                'display': 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'relative'
-              }}>
-                <h2 style={{position: 'absolute',
-                  fontFamily: 'sansSerif',
-                  color: 'grey',
-                  top: '46%'}}>Loading
-                </h2>
-                <img width="175px" src={eclipse} />
-              </div>
-             :
+            <Div>
+              <H2>Loading</H2>
+              <img src={eclipse} />
+            </Div>
+            :
             events.map(item => <EventsList 
               key={item.id} 
               title={item.title} 

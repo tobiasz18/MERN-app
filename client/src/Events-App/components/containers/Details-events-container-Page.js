@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getEventByTitle, removeEvent, getEvents } from '../../actions';
 import { Helmet } from 'react-helmet';
 import DetailEvent from '../presentation/DetailsSingleEvent';
-
+import { Div, H2 } from '../../styled-components/LoaderStyle';
 import eclipse from '../../img/eclipse.svg'
 class EventDetailsContainer extends Component {
 
@@ -47,20 +47,7 @@ class EventDetailsContainer extends Component {
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
-        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> :
-            <div style={{
-              'display': 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              position: 'relative'
-            }}>
-              <h2 style={{position: 'absolute',
-                fontFamily: 'sansSerif',
-                color: 'grey',
-                top: '46%'}}>Loading
-              </h2>
-              <img width="175px" src={eclipse} />
-            </div> }               
+        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <Div><H2>Loading</H2><img src={eclipse}/> </Div> }               
       </div>
     )
   }

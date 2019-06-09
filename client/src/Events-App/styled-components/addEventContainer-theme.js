@@ -7,6 +7,7 @@ export const FormContainer = styled.div`
   margin-top: 20px;
   max-width: 500px;
   min-width: 50vw;
+  margin-bottom: 23px;
 `
 export const HeaderForm = styled.div`
   font-weight: bold;

@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import {media } from './RWD-media'; //rwd
 
 export const Nav = styled.nav`
   transition: 0.3s;
@@ -9,17 +10,25 @@ export const Nav = styled.nav`
   z-index: 1;
   top: 0;
 `
+
+/*
+  ${media.desktop`background: dodgerblue;`}
+  ${media.tablet`background: mediumseagreen;`}
+  ${media.phone`background: palevioletred;`}
+
+*/ 
+
 export const NavContainer = styled.div`
   max-width: 1100px;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
+  margin: auto; 
+  ${media.phone`flex-direction: column;`}
 
-  @media (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
+  a {
+    text-decoration: none;
   }
 `
 export const Logo = styled.div`
@@ -27,6 +36,7 @@ export const Logo = styled.div`
   font-size: 25px;
   font-family: 'Stylish', sans-serif;
   color: white;
+
 `
 export const Ul = styled.ul`
   display: flex;
@@ -53,4 +63,32 @@ export const Ul = styled.ul`
  li:last-child a {
    color: #ff7e28;
  }
+
+ ${media.phone`${props => props.setDisplay ? templateRespMenu : 'display: none'}`}
 `
+const templateRespMenu = css`
+  display:flex;
+  flex-direction: column;
+  padding: 0;
+`
+
+// responsive menu
+export const ResponsiveMenu = styled.div`
+    color: white;
+    float: right;
+    padding-right: 10px;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    padding: 0 20px;
+    
+    ${media.phone`display: block; `}
+
+` 
+
+
+
+
+
+
+

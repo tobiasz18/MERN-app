@@ -1,5 +1,6 @@
 export const useHideOnScrolled = (useState, useEffect, from) => {
   const [hidden, setHidden] = useState(false);
+  const [test, setTest] = useState(false);
 
   const handleScroll = () => {
     const top = window.pageYOffset || document.documentElement.scrollTop;
