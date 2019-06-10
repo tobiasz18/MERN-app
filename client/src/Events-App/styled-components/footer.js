@@ -6,7 +6,7 @@ export const Footer = styled.div`
   padding: 20px;
   color: rgb(255,255,255);
   text-align: center;
-  margin-top: 137px;
+  margin-top: 210px;
   font-family: sans-serif;
 
 ` 
