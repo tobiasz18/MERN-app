@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Img = styled.img`
   max-width: 800px;
-  min-height: 460px
+  min-height: 360px
+  width: 100%;
 `
 export const Section = styled.section`
   margin: auto;
@@ -11,6 +12,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  padding: 0 15px;
 
   p {
     color: rgb(112, 112, 112);

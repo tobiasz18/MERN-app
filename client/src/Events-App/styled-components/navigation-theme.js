@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {media } from './RWD-media'; //rwd
+import {media} from './RWD-media'; // rwd template's
 
 export const Nav = styled.nav`
   transition: 0.3s;

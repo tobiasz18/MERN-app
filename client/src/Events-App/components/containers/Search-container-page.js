@@ -39,7 +39,7 @@ class SearchContainer extends React.Component {
             placeholder="Search by location" 
             onChange={this.handleChange} 
           />
-          <Link to={checkPath}>Search</Link>    
+          <div><Link to={checkPath}>Search</Link>   </div> 
         </ContainerSection1>  
         <ContainerSection2>
           <Switch>

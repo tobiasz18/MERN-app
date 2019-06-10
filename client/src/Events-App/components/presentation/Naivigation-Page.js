@@ -22,7 +22,6 @@ const Navigation = () => {
     };
   }, []);
 
-
   return (
     <Nav positionProp={padding}>
       <ResponsiveMenu onClick={() => setMenuResp(!menuResp)}>&#9776;</ResponsiveMenu>

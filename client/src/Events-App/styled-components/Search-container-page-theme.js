@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {media} from './RWD-media'; // rwd template's
 
 export const ContainerArticle = styled.article`
   @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
@@ -16,9 +17,11 @@ export const ContainerArticle = styled.article`
 `
 
 export const ContainerSection1 = styled.section`
-  padding: 50px 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px;
   width: 100%;
-  text-align: center;
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 2px 7px white;
@@ -30,6 +33,7 @@ export const ContainerSection1 = styled.section`
     font-size: 17px;
     outline-color: #ff8628;
     color: white;
+    ${media.phone`width: 100%`}
   }
 
   a {
