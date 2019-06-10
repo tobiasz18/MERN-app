@@ -15,7 +15,8 @@ export const Section = styled.section`
 export const Image = styled.div`
   width: 300px;
   display: flex;
-
+  height: fit-content;
+  
   img {
     width: 100%;
     height: 100%;
