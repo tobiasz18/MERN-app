@@ -4,7 +4,7 @@
   The project we can divide into client side and server side.
   
   1. Client side
-    the client side created based on basic functions pattern redux, 
+    created based on basic functions pattern redux, 
     with styled-components to stylish react components 
 
   2. Server side   
