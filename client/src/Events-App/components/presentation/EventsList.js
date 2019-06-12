@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Section, Image, Text} from '../../styled-components/EventsList-theme';
 import { Link } from 'react-router-dom';
 

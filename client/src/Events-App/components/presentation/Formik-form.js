@@ -7,7 +7,6 @@ import {
   SpanRequired,
   SpanContent,
   TextInput, 
-  Select,
   Textarea,
   ErrorMessage, 
   SubmitButton } from '../../styled-components/addEventContainer-theme';

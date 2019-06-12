@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
 import { Article } from '../../styled-components/eventsContainer-theme';
 import EventsList from '../presentation/EventsList';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import eclipse from '../../img/eclipse.svg';
-import { Div, H2 } from '../../styled-components/LoaderStyle';
+import { Div } from '../../styled-components/LoaderStyle';
 class EventsContainer extends Component {
 
   componentDidMount = () => {
