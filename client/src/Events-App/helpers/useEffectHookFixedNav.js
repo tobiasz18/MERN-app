@@ -1,4 +1,4 @@
-export const useHideOnScrolled = (useState, useEffect, from) => {
+/*export const useHideOnScrolled = (useState, useEffect, from) => {
   const [hidden, setHidden] = useState(false);
   const [test, setTest] = useState(false);
 
@@ -15,4 +15,4 @@ export const useHideOnScrolled = (useState, useEffect, from) => {
   }, []);
 
   return hidden;
-};
+};*/

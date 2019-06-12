@@ -47,7 +47,7 @@ class EventDetailsContainer extends Component {
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
-        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <Div><H2>Loading</H2><img src={eclipse}/> </Div> }               
+        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <Div>{/*` <H2>Loading</H2>`*/}<img src={eclipse}/> </Div> }               
       </div>
     )
   }

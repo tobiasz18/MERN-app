@@ -7,7 +7,7 @@ export const Div = styled.div`
   position: relative;
 
   img {
-    width: 175px;
+    width: 90px;
   }
 `
 

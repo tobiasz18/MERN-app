@@ -5,8 +5,6 @@ import FormikForm from '../presentation/Formik-form';
 import { LoaderContainer } from '../../styled-components/addEventContainer-theme';
 import { Helmet } from 'react-helmet';
 import loader from '../../img/spinner.svg';
-
-import { Redirect } from 'react-router-dom';
 class AddEventContainer extends Component {
 
   render() {

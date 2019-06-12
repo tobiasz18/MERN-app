@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { editEvet, getEventById } from '../../actions';
 import FormikForm from '../presentation/Formik-form';
-import Spinner from '../../img/spinner.svg'
+import Spinner from '../../img/spinner.svg';
+import { Container } from '../../styled-components/Edit-event-container-theme';
 class EditEventContainer extends Component {
   constructor(props) {
     super(props)
@@ -17,7 +18,7 @@ class EditEventContainer extends Component {
   
   render() {
     return(
-      <div style={{display: 'flex', justifyContent: 'center'}}>
+      <Container>
         {
           this.props.singleEvent[0] == undefined ? <img src={Spinner} /> : 
           <FormikForm 
@@ -27,7 +28,7 @@ class EditEventContainer extends Component {
             title={'Edit Event'}
           />
         }
-      </div>
+      </Container>
     )
   }
 }

@@ -35,7 +35,7 @@ class EventsContainer extends Component {
         {
           loading ? 
             <Div>
-              <H2>Loading</H2>
+             {/*` <H2>Loading</H2>`*/}
               <img src={eclipse} />
             </Div>
             :

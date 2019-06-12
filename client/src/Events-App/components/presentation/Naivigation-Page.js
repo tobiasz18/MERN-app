@@ -29,7 +29,7 @@ const Navigation = () => {
         <Link style={{color: 'black'}} to="/"><Logo>Events Home</Logo></Link>
         <Ul setDisplay={menuResp}>
           <li>
-          <Link to="/">Events</Link>
+            <Link to="/">Events</Link>
           </li>
           <li>
             <Link to="/search">Search </Link> 
