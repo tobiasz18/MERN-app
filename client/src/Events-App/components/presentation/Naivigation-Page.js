@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Logo, Nav, Ul, NavContainer, ResponsiveMenu }  from '../../styled-components/navigation-theme';
-import search from '../../img/search.png';
-import { useHideOnScrolled } from '../../helpers/useEffectHookFixedNav';
 
 const Navigation = () => {
- // const padding = useHideOnScrolled(useState, useEffect, 92);
-  
   const [padding, setPadding] = useState(false);
   const [menuResp, setMenuResp] = useState(false);
 
