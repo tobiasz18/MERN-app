@@ -11,7 +11,7 @@
     simple rest api with Express.js with mongoDB in Node.js
 
     avaible endpoints:
-      ```sh
+      
         get - https://events-api-heroku.herokuapp.com/api // get all events
 
         post - https://events-api-heroku.herokuapp.com/api // add new event 
@@ -23,7 +23,7 @@
         put - https://events-api-heroku.herokuapp.com/api/:id // update specifice event by id
 
         delete - https://events-api-heroku.herokuapp.com/api/:id // delete event by id
-      ```
+     
 
 <!-- GETTING STARTED -->
 ## Getting Started
