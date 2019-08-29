@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  max-width: 600px;
+  max-width: 800px;
   min-height: 360px
+  max-height: 600px
   width: 100%;
 `
 export const Section = styled.section`
