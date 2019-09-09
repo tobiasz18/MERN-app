@@ -55,7 +55,6 @@ export const Div = styled.div`
       color: #e9a825;
     }
   }
-
   button {
     border: none;
     font-size: 15px;
