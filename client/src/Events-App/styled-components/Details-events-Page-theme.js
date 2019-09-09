@@ -5,6 +5,7 @@ export const Img = styled.img`
   min-height: 360px
   max-height: 600px
   width: 100%;
+  margin: 20px 0;
 `
 export const Section = styled.section`
   margin: auto;
@@ -21,8 +22,9 @@ export const Section = styled.section`
     font-weight: 400;
     font-family: 'Bree Serif', serif;
     overflow: hidden;
-    line-height: 20px;
+    line-height: 140%;
     max-width: 645px;
+    margin: 0;
   }
 `
 export const SpanHeader = styled.span`
@@ -30,6 +32,7 @@ export const SpanHeader = styled.span`
   font-family: 'Lato', sans-serif;
   color: #4a4a4a;
   font-size: 45px;
+  margin: 20px 0;
 `
 export const Div = styled.div`
   display: flex;

@@ -10,11 +10,10 @@ const DetailEvent = ({event, removeEvent}) => (
     </Div>        
     <SpanHeader>{event.title}</SpanHeader>
     <p>{event.desc}</p>  
-    <p>Location: {event.location}</p>
     <Img src={event.imageUrl} />
-    <p>Organizers by {event.organization}</p>
-    
+    <p>Location: {event.location}</p>
     <p>Date event: {event.date}</p> 
+    <p>Organizers by {event.organization}</p> 
   </Section> 
 )
 
