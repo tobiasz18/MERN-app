@@ -20,7 +20,7 @@ export const Figure =  styled.figure`
     font-size: 20px;
     height: 100%;
     opacity: 0.8;
-    background: rgba(0,0,0,0.3);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) );
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -35,9 +35,12 @@ export const Figure =  styled.figure`
 export const Span = styled.span`
     @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
     padding: 10px;
+    -webkit-text-decoration: none;
     text-decoration: none;
     color: #fff;
-    background: rgba(0,0,0,0.3);
+    font-family: Lato,sans-serif;
     width: 100%;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+   
 `
