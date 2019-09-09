@@ -9,10 +9,11 @@ const DetailEvent = ({event, removeEvent}) => (
       <button  style={{dosplay: 'flex'}} onClick={removeEvent}>Remove</button>            
     </Div>        
     <SpanHeader>{event.title}</SpanHeader>
+    <p>{event.desc}</p>  
     <p>Location: {event.location}</p>
     <Img src={event.imageUrl} />
     <p>Organizers by {event.organization}</p>
-    <p>{event.desc}</p>  
+    
     <p>Date event: {event.date}</p> 
   </Section> 
 )

@@ -16,7 +16,6 @@ export const Section = styled.section`
 export const Article = styled.article`
   display: flex;
   justify-content: center;
-
   font-family: 'Source Sans Pro', sans-serif;
   max-width: 1100px;
   min-height: 780px;
@@ -24,10 +23,10 @@ export const Article = styled.article`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  background: ${props => props.loading ? '#f8f8f8 ' : 'white'};
+  background: ${props => props.loading ? '#f8f8f8 ' : '#fff'};
   justify-content: ${props => props.loading ? 'center' : 'none'};
   margin-top: 150px;
-  box-shadow: ${props => props.loading ? ' none ' : ' 14px 3px 16px #f1f1f1'};
+  box-shadow: ${props => props.loading ? ' none ' : '6px 3px 16px #f1f1f1'};
 
 
 

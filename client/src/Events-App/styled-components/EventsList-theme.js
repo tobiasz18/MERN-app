@@ -36,7 +36,6 @@ export const Text = styled.div`
     letter-spacing: 0.3px;
 
     &:hover {
-    
       color: rgb(255, 126, 40);
     }
   }

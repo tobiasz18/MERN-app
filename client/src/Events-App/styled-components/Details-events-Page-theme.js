@@ -16,21 +16,20 @@ export const Section = styled.section`
   padding: 0 15px;
 
   p {
-    color: rgb(112, 112, 112);
     letter-spacing: 0.3px;
     font-weight: 400px;
     font-weight: 400;
-    font-family: Sky Text,Sans-serif;
+    font-family: 'Bree Serif', serif;
     overflow: hidden;
     line-height: 20px;
+    max-width: 645px;
   }
 `
 export const SpanHeader = styled.span`
-  line-height: 56px;
   font-weight: 400;
-  font-family: Sky Text,Sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #4a4a4a;
-  font-size: 2.3em;
+  font-size: 45px;
 `
 export const Div = styled.div`
   display: flex;
