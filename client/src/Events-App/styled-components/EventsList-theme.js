@@ -24,7 +24,7 @@ export const Image = styled.div`
   }
 `
 export const Text = styled.div`
-   padding-left: 20px;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,14 +37,18 @@ export const Text = styled.div`
 
     &:hover {
     
-      color: #40a3d3;
+      color: rgb(255, 126, 40);
     }
   }
   div > p {
     color: #524d46;
+    font-family: serif;
+    font-size: 16.5px;
+    max-width: 640px;
   } 
   div > div {
-    color: #9e2a2a;
+    color: #524d46;
+   
   }
 `
 
