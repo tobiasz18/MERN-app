@@ -3,8 +3,8 @@ import {media} from './RWD-media'; // rwd template's
 
 export const Nav = styled.nav`
   transition: 0.3s;
-  box-shadow: 0 0 0.5rem rgba(83,78,76,.5);
-  background: #1a1a1a;
+  box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
+  background: #fff;
   padding: ${props => props.positionProp ? '3px 0' : '7px 0'}
   width: 100%;
   z-index: 1;
@@ -35,7 +35,7 @@ export const Logo = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
   font-size: 25px;
   font-family: 'Stylish', sans-serif;
-  color: white;
+  color: #646a6d;
 
 `
 export const Ul = styled.ul`
@@ -50,7 +50,7 @@ export const Ul = styled.ul`
     
     a {
       text-decoration: none;
-      color: #fff;
+      color: #848b8e;
       letter-spacing: 0.8px;
       padding-right: 3px;
 
@@ -61,7 +61,8 @@ export const Ul = styled.ul`
   }
 
  li:last-child a {
-   color: #ff7e28;
+   color: #357FC1;
+   font-weight: 700;
  }
 
  ${media.phone`${props => props.setDisplay ? templateRespMenu : 'display: none'}`}
@@ -74,7 +75,7 @@ const templateRespMenu = css`
 
 // responsive menu
 export const ResponsiveMenu = styled.div`
-    color: white;
+    color: #646a6d;
     float: right;
     padding-right: 10px;
     font-size: 23px;

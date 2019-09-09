@@ -31,7 +31,7 @@ export const Text = styled.div`
     justify-content: space-between;
 
   div > a {
-    color: black;
+    color: #3e3b3b
     font-weight: 600;
     font-family: Lato, sans-serif;
     text-decoration: none;
@@ -39,7 +39,7 @@ export const Text = styled.div`
     letter-spacing: 0.3px;
 
     &:hover {
-      color: rgb(255, 126, 40);
+      color: #e9a825;
     }
   }
   div > p {

@@ -22,7 +22,7 @@ export const ContainerSection1 = styled.section`
   justify-content: center;
   padding: 50px 15px;
   width: 100%;
-  background-color: #ffffff;
+  background: #eae9e9;
   box-sizing: border-box;
   box-shadow: 0 2px 7px white;
 
@@ -32,7 +32,7 @@ export const ContainerSection1 = styled.section`
     padding: 10px 32px;
     font-size: 17px;
     outline-color: #ff8628;
-    color: white;
+    color: #ffffff;
     ${media.phone`width: 100%`}
   }
 

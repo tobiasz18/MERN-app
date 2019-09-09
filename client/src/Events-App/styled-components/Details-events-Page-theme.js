@@ -44,14 +44,15 @@ export const Div = styled.div`
     border: none;
     font-size: 15px;
     cursor: pointer;
-    background: #4c4a4a;
-    color: #bbbbbb;
+    background: none;
+    color: #000000;
     padding: 5px 20px;
     font-weight: 600;
     margin-right: 5px;
+    font-family: 'Lato',sans-serif;
 
     &:hover {
-      color: white;
+      color: #e9a825;
     }
   }
 
@@ -59,13 +60,14 @@ export const Div = styled.div`
     border: none;
     font-size: 15px;
     cursor: pointer;
-    background: #4c4a4a;
-    color: #bbbbbb;
+    background: none;
+    color: #000000;
     padding: 5px 20px;
     font-weight: 600;
+    font-family: 'Lato',sans-serif;
 
     &:hover {
-      color: white;
+      color: #e9a825;
     }
   }
 `
