@@ -15,7 +15,7 @@ const EventsList = ({ title, desc, image, location, checkLengthDesc }) => (
         </p>
       </div>
       <div>
-        <div>location: {location}</div>
+        <div>Location: {location}</div>
       </div>
     </Text>
   </Section>

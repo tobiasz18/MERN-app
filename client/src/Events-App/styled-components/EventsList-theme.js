@@ -6,6 +6,7 @@ export const Section = styled.section`
   padding-bottom: 10px;
   border-bottom: 1px solid #DDD!important;
   width: 100%;
+  margin-bottom: 50px;
 
   div:nth-child(2) {
     width: 100%;
@@ -32,7 +33,9 @@ export const Text = styled.div`
   div > a {
     color: black;
     font-weight: 600;
-    font-size: 18px;
+    font-family: Lato, sans-serif;
+    text-decoration: none;
+    font-size: 22px;
     letter-spacing: 0.3px;
 
     &:hover {
@@ -41,13 +44,15 @@ export const Text = styled.div`
   }
   div > p {
     color: #524d46;
-    font-family: serif;
+    font-family: "Bree Serif", serif;
+    color: #000000;
     font-size: 16.5px;
     max-width: 640px;
   } 
   div > div {
     color: #524d46;
-   
+    font-family: Lato,sans-serif;
+    font-size: 17px;
   }
 `
 

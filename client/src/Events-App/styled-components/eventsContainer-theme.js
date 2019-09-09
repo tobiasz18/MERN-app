@@ -26,7 +26,7 @@ export const Article = styled.article`
   background: ${props => props.loading ? '#f8f8f8 ' : '#fff'};
   justify-content: ${props => props.loading ? 'center' : 'none'};
   margin-top: 150px;
-  box-shadow: ${props => props.loading ? ' none ' : '6px 3px 16px #f1f1f1'};
+  box-shadow: ${props => props.loading ? ' none ' : 'none'};
 
 
 
