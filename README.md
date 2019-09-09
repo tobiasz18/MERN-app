@@ -33,7 +33,6 @@
 1. Server Side
   ```sh
   git clone https://github.com/tobiasz18/RestApi_with_React
-
   npm install 
   npm start
 
@@ -43,11 +42,15 @@
 ```sh
   git clone https:://github.com/your_username_/Project-Name.git || cd client
 
-  npm install 
-  npm run build
-  npm start
+  then go to client folder and type in terminal >
+    npm install 
+    npm run build
+    npm start
+
+  remember that server (first point) have to running   
 
 ```
+
 
 ### Built With
 
