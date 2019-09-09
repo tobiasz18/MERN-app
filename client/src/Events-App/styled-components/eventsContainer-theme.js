@@ -23,14 +23,9 @@ export const Article = styled.article`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  background: ${props => props.loading ? '#fff' : '#fff'};
   justify-content: ${props => props.loading ? 'center' : 'none'};
   margin-top: 150px;
   box-shadow: ${props => props.loading ? ' none ' : 'none'};
-
-
-
-
 `
 
 
