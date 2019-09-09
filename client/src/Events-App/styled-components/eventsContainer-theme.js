@@ -17,7 +17,7 @@ export const Article = styled.article`
   display: flex;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
-  max-width: 1100px;
+  max-width: 950px;
   min-height: 780px;
   padding: 0 20px;
   margin: auto;
