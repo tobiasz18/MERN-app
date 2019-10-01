@@ -1,6 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  Project running on https://events-api-heroku.herokuapp.com/ 
+### (heroku free package = long first charging time ~ 5 second)
+  Project running on https://events-api-heroku.herokuapp.com/  
   The project we can divide into client side and server side.
   
   1. Client side
@@ -32,10 +33,9 @@
 
 1. Server Side
   ```sh
-  git clone https://github.com/tobiasz18/RestApi_with_React
-  npm install 
-  npm start
-
+    git clone https://github.com/tobiasz18/RestApi_with_React
+    npm install 
+    npm start
   ```
 
 2. Client side
@@ -55,7 +55,6 @@
 
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
-* [Node](https://nodejs.org/)
 * [MongoDb](https://www.mongodb.com/)
 * [expressJS](https://expressjs.com/)
 * [styled-components](https://www.styled-components.com/)
