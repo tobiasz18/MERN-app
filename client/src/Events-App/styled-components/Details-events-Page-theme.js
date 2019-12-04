@@ -15,8 +15,8 @@ export const Section = styled.section`
   flex-direction: column;
   margin-bottom: 50px;
   padding: 0 15px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap
 
   p {
     letter-spacing: 0.3px;
