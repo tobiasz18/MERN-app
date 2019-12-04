@@ -7,6 +7,8 @@ export const Section = styled.section`
   border-bottom: 1px solid #DDD!important;
   width: 100%;
   margin-bottom: 50px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;  
 
   div:nth-child(2) {
     width: 100%;
