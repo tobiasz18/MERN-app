@@ -45,7 +45,7 @@ class EventsContainer extends Component {
               desc={item.desc} 
               checkLengthDesc={this.checkLengthDesc} 
               location={item.location} 
-              image={item.imageUrl}/>).reverse()            
+              image={item.imageUrl}/>)           
             }
       </Article>
     )

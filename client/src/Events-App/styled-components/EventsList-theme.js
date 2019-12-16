@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {media} from './RWD-media'; // rwd template's
 
 export const Section = styled.section`
   display: flex;
@@ -14,6 +15,32 @@ export const Section = styled.section`
     width: 100%;
     overflow: hidden;
   }
+
+  :first-child {
+    display: block;
+
+    div {
+      width: 100%;
+    }
+
+    div:last-child {
+      padding-left: 0;
+      padding-top: 4px;
+    }
+  }
+
+   div:nth-child(1) {
+    ${media.phone`
+      width: 100%;
+      padding-bottom: 3px;
+     `}
+   }
+
+   div:nth-child(2) {
+    ${media.phone`padding: 0 `}
+   }
+
+   ${media.phone`display: block; `}
 `
 export const Image = styled.div`
   width: 300px;
