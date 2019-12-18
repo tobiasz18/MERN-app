@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 const EventsList = ({ title, desc, image, location, checkLengthDesc }) => (
   <Section>
-    <Image>
-      <img src={image}/>
-    </Image>
+    <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`} >
+      <Image>  
+        <img src={image}/>       
+      </Image>
+    </Link>
     <Text>
      <div>
         <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`}>{title}</Link>

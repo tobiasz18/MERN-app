@@ -11,6 +11,10 @@ export const Section = styled.section`
   overflow-wrap: break-word;
   word-wrap: break-word;  
 
+  & > a:hover {
+    opacity: 0.95;
+  }
+
   div:nth-child(2) {
     width: 100%;
     overflow: hidden;
