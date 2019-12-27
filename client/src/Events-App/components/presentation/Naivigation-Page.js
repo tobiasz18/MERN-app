@@ -22,7 +22,7 @@ const Navigation = () => {
     <Nav positionProp={padding}>
       <ResponsiveMenu onClick={() => setMenuResp(!menuResp)}>&#9776;</ResponsiveMenu>
       <NavContainer>
-        <Link style={{color: 'black'}} to="/"><Logo>Events Home</Logo></Link>
+        <Link style={{color: 'black'}} to="/"><Logo>Website Logo</Logo></Link>
         <Ul setDisplay={menuResp}>
           <li>
             <Link to="/">Events</Link>
