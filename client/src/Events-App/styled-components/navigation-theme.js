@@ -36,6 +36,11 @@ export const Logo = styled.div`
   font-size: 25px;
   font-family: 'Stylish', sans-serif;
   color: #646a6d;
+  width: 27px;
+
+  img {
+    width: 130%;
+  }
 
 `
 export const Ul = styled.ul`
@@ -44,6 +49,7 @@ export const Ul = styled.ul`
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin-left: 90px;
   
   li {
     padding-right: 30px;
