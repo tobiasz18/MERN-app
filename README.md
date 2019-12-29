@@ -67,9 +67,7 @@
     npm install 
     npm run build
     npm start
-
-  remember that server (first point) have to running   
-
+   
 ```
 
 ### Built With
