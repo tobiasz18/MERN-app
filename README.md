@@ -1,6 +1,29 @@
 <!-- ABOUT THE PROJECT -->
-## Events app
 ### (heroku free package = long first charging time ~ 15 second)
+
+## Getting Started
+
+### Installation locally
+
+1. Server Side
+  ```sh
+    git clone https://github.com/tobiasz18/RestApi_with_React
+    npm install 
+    npm start
+  ```
+
+2. Client side
+```sh
+  git clone https:://github.com/your_username_/Project-Name.git || cd client
+
+  then go to client folder and type in terminal >
+    npm install 
+    npm run build
+    npm start
+   
+```
+
+
   Project running on https://events-api-heroku.herokuapp.com/  
   The project we can divide into client side and server side.
   
@@ -47,28 +70,6 @@
             "__v": 0
         }
   ```
-
-## Getting Started
-
-### Installation locally
-
-1. Server Side
-  ```sh
-    git clone https://github.com/tobiasz18/RestApi_with_React
-    npm install 
-    npm start
-  ```
-
-2. Client side
-```sh
-  git clone https:://github.com/your_username_/Project-Name.git || cd client
-
-  then go to client folder and type in terminal >
-    npm install 
-    npm run build
-    npm start
-   
-```
 
 ### Built With
 
