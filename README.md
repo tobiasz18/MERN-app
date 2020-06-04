@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ### (heroku free package = long first charging time ~ 15 second)
-
+  Project running on https://events-api-heroku.herokuapp.com/  
 ## Getting Started
 
 ### Installation locally
@@ -24,7 +24,7 @@
 ```
 
 
-  Project running on https://events-api-heroku.herokuapp.com/  
+
   The project we can divide into client side and server side.
   
   1. Client side
