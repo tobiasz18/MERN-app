@@ -27,7 +27,7 @@ class EventSearchList extends React.Component {
             title={item.title} 
           />) 
         }
-        { this.props.searchEvents === 0 && 
+        { this.props.searchEvents.length == 0 && 
           <h2>No results for "{/*space*/}
             <span style={{fontWeight: '600'}}>
               {this.props.match.params.location} 
