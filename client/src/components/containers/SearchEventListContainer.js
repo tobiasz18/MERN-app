@@ -21,14 +21,19 @@ class EventSearchList extends React.Component {
       <React.Fragment>
         {
           this.props.searchEvents.map(item => <SearchSingleEvent
-            key={item.id} titleText={this.props.match.params.location}  image={item.imageUrl} title={item.title} />) 
+            key={item.id} 
+            titleText={this.props.match.params.location} 
+            image={item.imageUrl} 
+            title={item.title} 
+          />) 
         }
         { this.props.searchEvents === 0 && 
           <h2>No results for "{/*space*/}
             <span style={{fontWeight: '600'}}>
               {this.props.match.params.location} 
             </span> " location
-          </h2> } 
+          </h2>
+        } 
       </React.Fragment>
     )
   }

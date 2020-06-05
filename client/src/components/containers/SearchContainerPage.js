@@ -4,9 +4,8 @@ import EventSearchList from './SearchEventListContainer';
 import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/SearchContainerPage.styled';
 import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
-
 import {Helmet} from "react-helmet";
-import DefaultStateSearchEventsList from '../presentation/DefaultStateSearchEventsList';
+
 class SearchContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +42,6 @@ class SearchContainer extends React.Component {
         </ContainerSection1>  
         <ContainerSection2>
           <Switch>
-            <Route exact path={`/search`} component={DefaultStateSearchEventsList} />
             <Route exact path={`${this.props.match.url}/:location`} component={EventSearchList}/>
           </Switch>
         </ContainerSection2>

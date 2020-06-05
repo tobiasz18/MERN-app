@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Figure =  styled.figure`
-  flex: 0 1 48%;
+  flex: 1;
   position: relative;
   margin: 1%;
   cursor: pointer;
+  max-width: 350px;
 
   img {
     width: 100%;
