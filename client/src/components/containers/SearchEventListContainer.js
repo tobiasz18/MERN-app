@@ -23,7 +23,7 @@ class EventSearchList extends React.Component {
           this.props.searchEvents.map(item => <SearchSingleEvent
             key={item.id} titleText={this.props.match.params.location}  image={item.imageUrl} title={item.title} />) 
         }
-        { this.props.searchEvents == 0 && 
+        { this.props.searchEvents === 0 && 
           <h2>No results for "{/*space*/}
             <span style={{fontWeight: '600'}}>
               {this.props.match.params.location} 

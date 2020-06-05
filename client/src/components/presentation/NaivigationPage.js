@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import { Logo, Nav, Ul, NavContainer, ResponsiveMenu }  from '../../styled-components/navigation-theme';
+import { Logo, Nav, Ul, NavContainer, ResponsiveMenu }  from '../../styled-components/Navigation.styled';
 import logo from '../../logo/logoMark.png'
 
 const Navigation = () => {
@@ -23,7 +23,7 @@ const Navigation = () => {
     <Nav positionProp={padding}>
       <ResponsiveMenu onClick={() => setMenuResp(!menuResp)}>&#9776;</ResponsiveMenu>
       <NavContainer>
-        <Link style={{color: 'black'}} to="/"><Logo><img src={logo} /></Logo></Link>
+        <Link style={{color: 'black'}} to="/"><Logo><img src={logo} alt="image.png" /></Logo></Link>
         <Ul setDisplay={menuResp}>
           <li>
             <Link to="/">Events</Link>

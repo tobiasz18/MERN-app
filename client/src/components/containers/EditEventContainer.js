@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { editEvet, getEventById } from '../../actions';
-import FormikForm from '../presentation/Formik-form';
+import FormikForm from '../presentation/FormikForm';
 import Spinner from '../../img/spinner.svg';
-import { Container } from '../../styled-components/Edit-event-container-theme';
+import { Container } from '../../styled-components/EditEventContainer.styled';
+
 class EditEventContainer extends Component {
   constructor(props) {
     super(props)
@@ -20,7 +21,7 @@ class EditEventContainer extends Component {
     return(
       <Container>
         {
-          this.props.singleEvent[0] == undefined ? <img src={Spinner} /> : 
+          this.props.singleEvent[0] === undefined ? <img src={Spinner} alt="smile.png" /> : 
           <FormikForm 
             actionSubmit={this.props.editEvet} 
             location={this.props} flag={true} 

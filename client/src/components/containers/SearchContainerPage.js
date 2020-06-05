@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import EventSearchList from './Search-event-list-container';
-import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/Search-container-page-theme';
+import EventSearchList from './SearchEventListContainer';
+import { ContainerArticle, ContainerSection1, ContainerSection2 } from '../../styled-components/SearchContainerPage.styled';
 import { connect } from 'react-redux';
 import { getEvents } from '../../actions';
 

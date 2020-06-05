@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { getEventByTitle, removeEvent, getEvents } from '../../actions';
 import { Helmet } from 'react-helmet';
 import DetailEvent from '../presentation/DetailsSingleEvent';
-import { Div, H2 } from '../../styled-components/LoaderStyle';
-import eclipse from '../../img/eclipse.svg'
+import { Div } from '../../styled-components/LoaderStyle.styled';
+import eclipse from '../../img/eclipse.svg';
+
 class EventDetailsContainer extends Component {
 
   constructor(props) {
@@ -41,13 +42,13 @@ class EventDetailsContainer extends Component {
   render() {
     const titleText = this.state.data ? this.state.data.title : 'loading';
     // to prevent show flashback from earlier state and check did actually data are loaded
-    const condition = this.state.data && this.props.match.params.title.replace(/_/g, ' ') == this.state.data.title;
+    const condition = this.state.data && this.props.match.params.title.replace(/_/g, ' ') === this.state.data.title;
     return (
       <div style={{minHeight: '760px', display: 'flex', justifyContent:'center' }}>
         <Helmet>
           <title>{titleText} - Events page</title>
         </Helmet>
-        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <Div>{/*` <H2>Loading</H2>`*/}<img src={eclipse}/> </Div> }               
+        { condition ? <DetailEvent removeEvent={this.removeEvent} event={this.state.data}/> : <Div>{/*` <H2>Loading</H2>`*/}<img src={eclipse} alt="smile.png" /> </Div> }               
       </div>
     )
   }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addEvent } from '../../actions';
-import FormikForm from '../presentation/Formik-form';
-import { LoaderContainer } from '../../styled-components/addEventContainer-theme';
+import FormikForm from '../presentation/FormikForm';
+import { LoaderContainer } from '../../styled-components/AddEventContainer.styled';
 import { Helmet } from 'react-helmet';
 import loader from '../../img/spinner.svg';
-class AddEventContainer extends Component {
 
+class AddEventContainer extends Component {
   render() {
     const { loading, addEvent } = this.props;
     const initialState = {
@@ -24,7 +24,7 @@ class AddEventContainer extends Component {
 
         {loading ? 
           <LoaderContainer>
-            <img src={loader}/>
+            <img src={loader} alt="smile.png" />
           </LoaderContainer> :
           <div>
             <FormikForm 

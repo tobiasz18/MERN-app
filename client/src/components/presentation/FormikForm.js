@@ -9,7 +9,7 @@ import {
   TextInput, 
   Textarea,
   ErrorMessage, 
-  SubmitButton } from '../../styled-components/addEventContainer-theme';
+  SubmitButton } from '../../styled-components/AddEventContainer.styled';
 import { AddEventSchema } from '../../helpers/validateSchema';
 import { Formik } from 'formik';
 

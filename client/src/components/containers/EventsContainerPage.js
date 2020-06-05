@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import { getEvents } from '../../actions';
-import { Article } from '../../styled-components/eventsContainer-theme';
+import { Article } from '../../styled-components/EventsContainer.styled';
 import EventsList from '../presentation/EventsList';
 import { Helmet } from "react-helmet";
 import eclipse from '../../img/eclipse.svg';
-import { Div } from '../../styled-components/LoaderStyle';
+import { Div } from '../../styled-components/LoaderStyle.styled';
 class EventsContainer extends Component {
 
   componentDidMount = () => {
@@ -36,7 +36,7 @@ class EventsContainer extends Component {
           loading ? 
             <Div>
              {/*` <H2>Loading</H2>`*/}
-              <img src={eclipse} />
+              <img src={eclipse} alt="smile.png"  />
             </Div>
             :
             events.map(item => <EventsList 

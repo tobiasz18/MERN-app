@@ -1,5 +1,5 @@
 import React from 'react';
-import { Img, Section, SpanHeader, Div } from '../../styled-components/Details-events-Page-theme';
+import { Img, Section, SpanHeader, Div } from '../../styled-components/DetailsEventsPage.styled';
 import { Link } from 'react-router-dom';
 
 const DetailEvent = ({event, removeEvent}) => (
@@ -10,7 +10,7 @@ const DetailEvent = ({event, removeEvent}) => (
     </Div>        
     <SpanHeader>{event.title}</SpanHeader>
     <p>{event.desc}</p>  
-    <Img src={event.imageUrl} />
+    <Img src={event.imageUrl} alt="smile.png" />
     <p>Location: {event.location}</p>
     <p>Date event: {event.date}</p> 
     <p>Organizers by {event.organization}</p> 

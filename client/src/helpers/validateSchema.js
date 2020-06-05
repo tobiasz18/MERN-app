@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-
+/*
 const FILE_SIZE = 160 * 1024;
 const SUPPORTED_FORMATS = [
   "image/jpg",
@@ -7,7 +7,7 @@ const SUPPORTED_FORMATS = [
   "image/gif",
   "image/png"
 ];
-
+*/
 export const AddEventSchema = Yup.object().shape({
   title: Yup.string()
     .min(4, 'Too Short!')

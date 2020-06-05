@@ -1,12 +1,12 @@
 import React from 'react';
-import { Section, Image, Text} from '../../styled-components/EventsList-theme';
+import { Section, Image, Text} from '../../styled-components/EventsList.styled';
 import { Link } from 'react-router-dom';
 
 const EventsList = ({ title, desc, image, location, checkLengthDesc }) => (
   <Section>
     <Link to={`/events/${title.replace(/\/|\||:\s*|—|’|‘|'|\.|\?|(<i[^>]+>|<i>|<\/i>)| /gi, "_")}`} >
       <Image>  
-        <img src={image}/>       
+        <img alt="" src={image}/>       
       </Image>
     </Link>
     <Text>
